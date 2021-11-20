@@ -5,12 +5,16 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 section{
     width: 100%;
     padding:0px;
-    max-height: 100vh;
+    min-height: 100vh;
     display: flex;
 }
 #home{
@@ -115,8 +119,26 @@ nav a:hover::before{
 h1{
     color: #6db1ff;
     font-size: 100px;
-    margin: 10px 0 30px;
-    line-height: 80;
+    margin-top: 20vh;
+    margin-left: 20vw;
+}
+
+h2{
+    color: #6db1ff;
+    font-size: 100px;
+    margin-top: 70;
+}
+
+h3{
+    color: #6db1ff;
+    font-size: 100px;
+    margin-top: 70;
+}
+
+h4{
+    color: #6db1ff;
+    font-size: 100px;
+    margin-top: 70;
 }
 
 

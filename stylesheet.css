@@ -11,6 +11,14 @@
     user-select: none; /* Standard */
 }
 
+#canvas1{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient()
+}
+
 section{
     width: 100%;
     padding:0px;
@@ -18,16 +26,16 @@ section{
     display: flex;
 }
 #home{
-    background-color:rgb(219, 255, 161);
+    background: rgb(0, 0, 0);
 }
 #languages{
-    background-color:rgb(163, 211, 255);
+    background: black;
 }
 #my_projects{
-    background-color:rgb(255, 163, 255);
+    background: black;
 }
 #contact_me{
-    background-color:rgb(255, 254, 183);
+    background: black;
 }
 
 .container{
@@ -117,16 +125,43 @@ nav a:hover::before{
 }
 
 h1{
+    font-family: 'Montserrat', sans-serif;
     color: #6db1ff;
     font-size: 100px;
     margin-top: 20vh;
-    margin-left: 20vw;
+    margin-left: 15vw;
 }
 
+.first_subtext{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 0vh;
+    margin-left: 14vw;
+    display: inline-block;
+    
+}
+
+.minitext{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: 1vw;
+    display: inline-block;
+    
+}
 h2{
     color: #6db1ff;
-    font-size: 100px;
-    margin-top: 70;
+    font-size: 70px;
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+
+.subtext_programming{
+    color: #6db1ff;
+    font-size: 60px;
+    margin-top: -20px;
+    margin-left: 21vw;
 }
 
 h3{
@@ -140,10 +175,6 @@ h4{
     font-size: 100px;
     margin-top: 70;
 }
-
-
-
-
 
 
 .btn{
@@ -173,7 +204,50 @@ h4{
 }
 
 
+.html_lang{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fbfcfb;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
 
+.python_lang{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fbfcfb;
+    margin-left: 10vw;
+    margin-top: 2vh;
+}
+
+.vbscript_lang{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fbfcfb;
+    margin-left: 10vw;
+    margin-top: 2vh;
+}
+
+.batch_lang{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fbfcfb;
+    margin-left: 10vw;
+    margin-top: 2vh;
+}
+
+.scratch_lang{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fbfcfb;
+    margin-left: 10vw;
+    margin-top: 2vh;
+}
 
 
 

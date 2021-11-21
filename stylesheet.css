@@ -159,15 +159,16 @@ h2{
 
 .subtext_programming{
     color: #6db1ff;
-    font-size: 60px;
+    font-size: 50px;
     margin-top: -20px;
-    margin-left: 21vw;
+    margin-left: calc(10vw + 200px);
 }
 
 h3{
     color: #6db1ff;
     font-size: 100px;
-    margin-top: 70;
+    margin-top: 10vh;
+    margin-left: 10vw;
 }
 
 h4{
@@ -207,16 +208,16 @@ h4{
 .html_lang{
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fbfcfb;
     margin-left: 10vw;
-    margin-top: 5vh;
+    margin-top: 15vh;
 }
 
 .python_lang{
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fbfcfb;
     margin-left: 10vw;
     margin-top: 2vh;
@@ -225,7 +226,7 @@ h4{
 .vbscript_lang{
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fbfcfb;
     margin-left: 10vw;
     margin-top: 2vh;
@@ -234,7 +235,7 @@ h4{
 .batch_lang{
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fbfcfb;
     margin-left: 10vw;
     margin-top: 2vh;
@@ -243,12 +244,11 @@ h4{
 .scratch_lang{
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 500;
     color: #fbfcfb;
     margin-left: 10vw;
     margin-top: 2vh;
 }
-
 
 
 

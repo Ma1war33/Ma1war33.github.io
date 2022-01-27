@@ -97,6 +97,9 @@ function fadetextfunc() {
         if (projectsshown==true){
             projects.style.animation = "0.7s 1 lessopacity forwards"
             projectsshown = false;
+
+            projectlinks.style.animation = "0.7s 1 lessopacity forwards";
+            morseundertext.style.animation = "0.7s 1 lessopacity forwards";
         }
     }
     

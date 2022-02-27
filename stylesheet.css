@@ -55,14 +55,92 @@ body {
     max-width: 50vw;
 }
 
+@keyframes MorseFadeInOut {
+    0% {
+        opacity:0;
+        right:-18vw
+    }
+    45% {
+        
+        opacity:0;
+        right:-18vw
+    }
+
+    49% {
+        opacity:0;
+    }
+    51% {
+        opacity:1;
+    }
+
+    55% {
+        
+        right:10vw;
+        opacity:1;
+    }
+    100% {
+        opacity:1;
+        right:10vw
+  }
+}
+
 .morsecoderimg {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
 
     width: 400;
     right: 10vw;
     top: 25vh;
-    opacity: 100;
+    opacity: 1;
+
+    animation-name: MorseFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes WordleFadeInOut {
+    0% {
+        
+        opacity:1;
+        right:calc(10vw - 90px)
+    }
+    45% {
+        right:calc(10vw - 90px)
+    }
+
+    49% {
+        opacity:1;
+    }
+    51% {
+        opacity:0;
+    }
+
+    55% {
+        right:calc(38vw - 90px)
+    }
+    100% {
+        
+        opacity:0;
+        right:calc(38vw - 90px)
+  }
+}
+
+.wordleimg {
+    position: absolute;
+    z-index: 3;
+
+    height:364;
+    right: calc(10vw - 90px);
+    top: 25vh;
+    opacity: 0;
+
+    animation-name: WordleFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
 }
 
 .fp {
@@ -76,6 +154,8 @@ body {
     position: absolute;
 
 }
+
+
 
 .morsecoder {
     font-family: SFPro;
@@ -115,13 +195,56 @@ body {
     color: rgb(211, 187, 0);
 }
 
-.thiswebsite {
+
+
+.wordle {
     font-family: SFPro;
     font-size: 25;
     z-index: 3;
 
     top: 125px;
-    left: 15vw;
+    left: 5vw;
+    position: absolute;
+
+    color: #f5f5f7;
+}
+
+.wordle-ut {
+    font-family: SFProThin;
+    font-size: 20;
+    z-index: 3;
+
+    top: 165px;
+    left: calc(5vw + 50px);
+    position: absolute;
+
+    color: rgb(255, 225, 0);
+}
+
+.wordle-link {
+    font-family: SFPro;
+    font-size: 25;
+    z-index: 3;
+
+    color: rgb(255, 225, 0);
+
+    text-decoration: none;
+}
+
+.wordle-link:hover {
+    color: rgb(211, 187, 0);
+}
+
+
+
+
+.thiswebsite {
+    font-family: SFPro;
+    font-size: 25;
+    z-index: 3;
+
+    top: 215px;
+    left: 5vw;
     position: absolute;
 
     color: #f5f5f7;
@@ -132,8 +255,8 @@ body {
     font-size: 20;
     z-index: 3;
 
-    top: 165px;
-    left: calc(15vw + 50px);
+    top: 255px;
+    left: calc(5vw + 50px);
     position: absolute;
 
     color: rgb(255, 225, 0);

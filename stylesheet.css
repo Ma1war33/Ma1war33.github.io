@@ -75,7 +75,7 @@ body {
     height:364;
     right: calc(10vw - 90px);
     top: 25vh;
-    opacity: 1;
+    opacity: 0;
     
     transition: opacity 1.2s ease-in-out;
 

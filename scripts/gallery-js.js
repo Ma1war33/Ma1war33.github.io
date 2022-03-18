@@ -8,7 +8,7 @@ image_width = gallery.clientWidth;
 image_height = gallery.clientHeight;
 images = ['url("img/gallery/wordle.png")', 'url("img/gallery/morsecoder.png")']
 
-gallery_background.style.height = image_height*10.45;
+gallery_background.style.height = image_height;
 
 dots = [];
 for (let i = 0; i < number_of_images; i++) {

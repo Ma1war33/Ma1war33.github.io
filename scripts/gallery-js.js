@@ -14,7 +14,7 @@ gallery_background.style.height = image_width / (1.798);
 pageloaded = false;
 
 function showgallery() {
-    gallery.style.animation = "fade-in 1s 0.1s forwards"
+    gallery.style.animation = "fade-in 1s 0.5s forwards"
 }
 document.onload = showgallery()
 

@@ -206,7 +206,6 @@ body {
     height: 55vw;
     top: 415px;
     left: 74vw;
-    
     position: absolute;
 }
 
@@ -235,9 +234,7 @@ body {
 
 .image-self-div {
     position: absolute;
-    top: 415px;
-    left: 74vw;
-    right: 2vw;
+    size: 100%;
 }
 .image-self {
     width: 24vw;

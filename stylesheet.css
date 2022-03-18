@@ -33,35 +33,6 @@ body {
     left: 1%;
     background-color: black;
 }
-.loading-div {
-    width:100%;
-    top:calc(50% - 40px);
-    position: absolute;
-}
-.loading-dot {
-    padding: 8px 8px;
-    margin-right: 2;
-    background-image: url("img/gallery/dot.png");
-    background-size: 60%;
-    background-color: transparent;
-    background-repeat: no-repeat;
-
-    position:absolute;
-    top: 50px;
-    opacity: 0;
-
-    filter: invert(100%);
-}
-.loading {
-    font-family: SFPro;
-    font-size: 20;
-    text-align: center;
-    color: white;
-
-    left:calc(50% - 40px);
-
-    position: absolute;
-}
 .gallery {
     position: center;
     width: 98%;

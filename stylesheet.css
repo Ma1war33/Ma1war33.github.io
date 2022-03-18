@@ -15,6 +15,9 @@ body {
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+
+    background: url("img/gallery/wordle.png") no-repeat -9999px -9999px;
+    background: url("img/gallery/morsecoder.png") no-repeat -9999px -9999px;
 }
 
 

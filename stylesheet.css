@@ -208,6 +208,14 @@ body {
     left: 74vw;
     position: absolute;
 }
+.image-self-div {
+    width: 100%;
+    position: relative;
+}
+.image-self {
+    width: 100%;
+    position: relative;
+}
 
 .title div {
     position: absolute;
@@ -230,12 +238,3 @@ body {
     font-size: 20;
 }
 
-
-
-.image-self-div {
-    position: absolute;
-    size: 100%;
-}
-.image-self {
-    width: 24vw;
-}

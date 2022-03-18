@@ -13,7 +13,7 @@ image_width = gallery.clientWidth;
 gallery_background.style.height = image_width / (1.798);
 
 function showgallery() {
-    gallery.style.animation = "fade-in 1s forwards"
+    gallery.style.animation = "fade-in 1s 1s forwards"
 }
 document.onload = showgallery()
 

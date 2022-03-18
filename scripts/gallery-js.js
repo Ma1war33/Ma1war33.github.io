@@ -5,10 +5,9 @@ gallery_background = document.getElementById("gallery-background");
 
 number_of_images = 2
 image_width = gallery.clientWidth;
-image_height = gallery.clientHeight;
 images = ['url("img/gallery/wordle.png")', 'url("img/gallery/morsecoder.png")']
 
-gallery_background.style.height = image_height;
+gallery_background.style.height = image_width / 1.77;
 
 dots = [];
 for (let i = 0; i < number_of_images; i++) {

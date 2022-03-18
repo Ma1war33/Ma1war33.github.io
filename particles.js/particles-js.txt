@@ -1,4 +1,0 @@
-This is a js library by VincentGarreau
-His website can be found here:
-
-https://vincentgarreau.com/particles.js/

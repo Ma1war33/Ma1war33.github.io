@@ -3,11 +3,27 @@ right_arrow = document.getElementById("right-arrow");
 gallery = document.getElementById("gallery");
 gallery_background = document.getElementById("gallery-background");
 
+// --- Setting Variables ---
 number_of_images = 2
-image_width = gallery.clientWidth;
 images = ['url("img/gallery/wordle.png")', 'url("img/gallery/morsecoder.png")']
 
-gallery_background.style.height = image_width / 1.77;
+// --- End of Section ---
+
+image_width = gallery.clientWidth;
+gallery_background.style.height = image_width / (1.798);
+
+function checkkey(e) {
+    e = e || window.event; // Use e if it exists or e will be equal to window.event
+
+    if (e.keyCode == '37') {
+        left_button_press()
+    }
+    else if (e.keyCode == '39') {
+        right_button_press()
+    }
+}
+
+document.onkeydown = checkkey;
 
 dots = [];
 for (let i = 0; i < number_of_images; i++) {
@@ -17,6 +33,7 @@ for (let i = 0; i < number_of_images; i++) {
 
 function arrowpos() {
     image_width = gallery.clientWidth;
+    gallery_background.style.height = image_width / (1.798);
 
     right_arrow.style.left = (image_width - 60) - (0.009 * window.innerWidth);
 
@@ -84,4 +101,5 @@ function left_button_press() {
 
 left_arrow.addEventListener("click", left_button_press)
 right_arrow.addEventListener("click", right_button_press)
+
 

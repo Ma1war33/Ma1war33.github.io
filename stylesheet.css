@@ -16,8 +16,6 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
 
-    background: url("img/gallery/wordle.png") no-repeat -9999px -9999px;
-    background: url("img/gallery/morsecoder.png") no-repeat -9999px -9999px;
 }
 
 
@@ -239,5 +237,10 @@ body {
 
     font-family: SFPro;
     font-size: 20;
+}
+
+.image-preload {
+    background: url("img/gallery/wordle.png") no-repeat -9999px -9999px;
+    background: url("img/gallery/morsecoder.png") no-repeat -9999px -9999px;
 }
 

@@ -11,9 +11,11 @@ images = ['url("img/gallery/wordle.png")', 'url("img/gallery/morsecoder.png")']
 
 image_width = gallery.clientWidth;
 gallery_background.style.height = image_width / (1.798);
+pageloaded = false;
 
 function showgallery() {
-    gallery.style.animation = "fade-in 1s 1s forwards"
+    gallery.style.animation = "fade-in 1s 0.5s forwards"
+    pageloaded = true;
 }
 document.onload = showgallery()
 
@@ -35,6 +37,22 @@ for (let i = 0; i < number_of_images; i++) {
     dots.push(document.getElementById("dot" + (i + 1)));
     dots[i].style.left = (0.5 * image_width) - ((number_of_images * 0.5) * 7) + (10 * i)
 }
+loading_dots = [];
+for (let i = 0; i < 3; i++) {
+    loading_dots.push(document.getElementById("loading-dot-" + (i + 1)));
+    loading_dots[i].style.left = (0.5 * gallery_background.clientWidth) - ((3 * 0.5) * 10) + (15 * i)
+}
+
+while (pageloaded=false) {
+    for (let i = 0; i < 3; i++) {
+        loading_dots[i].style.opacity = 1
+        setTimeout(sleep, 500);
+    }
+
+    for (let i = 0; i < 3; i++) {
+        loading_dots[i].style.opacity = 0
+    }
+}
 
 function arrowpos() {
     image_width = gallery.clientWidth;
@@ -44,6 +62,9 @@ function arrowpos() {
 
     for (let i = 0; i < number_of_images; i++) {
         dots[i].style.left = (0.5 * image_width) - ((number_of_images * 0.5) * 7) + (10 * i)
+    }
+    for (let i = 0; i < 3; i++) {
+        loading_dots[i].style.left = (0.5 * gallery_background.clientWidth) - ((3 * 0.5) * 10) + (15 * i)
     }
 
 }

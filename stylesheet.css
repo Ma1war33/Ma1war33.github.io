@@ -17,7 +17,33 @@ body {
     -ms-user-select: none;
 
 }
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+.gallery-background {
+    position: center;
+    width: 98%;
+    height: 38vw;
+    top: 38px;
+    left: 1%;
+    background-color: black;
+}
+.gallery {
+    position: center;
+    width: 98%;
+    padding-top: 38px;
+    padding-left: 1%;
+    content: url("img/gallery/wordle.png");
+    opacity: 0;
 
+    animation: fade-in 1s forwards;
+
+}
 
 
 .navbar {
@@ -74,14 +100,6 @@ body {
         transform: translateY(0);
     }
 }
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
 
 
 
@@ -118,14 +136,6 @@ body {
     left: 2vw;
     height: fit-content;
 
-
-}
-.gallery {
-    position: center;
-    width: 98%;
-    padding-top: 38px;
-    padding-left: 1%;
-    content: url("img/gallery/wordle.png");
 
 }
 .right-arrow {
@@ -240,7 +250,6 @@ body {
 }
 
 .image-preload {
-    background: url("img/gallery/wordle.png") no-repeat -9999px -9999px;
     background: url("img/gallery/morsecoder.png") no-repeat -9999px -9999px;
 }
 

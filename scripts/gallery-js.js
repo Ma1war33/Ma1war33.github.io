@@ -1,10 +1,14 @@
 left_arrow = document.getElementById("left-arrow");
 right_arrow = document.getElementById("right-arrow");
 gallery = document.getElementById("gallery");
+gallery_background = document.getElementById("gallery-background");
 
 number_of_images = 2
 image_width = gallery.clientWidth;
+image_height = gallery.clientHeight;
 images = ['url("img/gallery/wordle.png")', 'url("img/gallery/morsecoder.png")']
+
+gallery_background.style.height = image_height*10.45;
 
 dots = [];
 for (let i = 0; i < number_of_images; i++) {

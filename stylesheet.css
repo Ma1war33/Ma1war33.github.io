@@ -41,8 +41,6 @@ body {
     content: url("img/gallery/wordle.png");
     opacity: 0;
 
-    animation: fade-in 1s forwards;
-
 }
 
 

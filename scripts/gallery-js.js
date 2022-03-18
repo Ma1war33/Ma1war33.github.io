@@ -12,6 +12,11 @@ images = ['url("img/gallery/wordle.png")', 'url("img/gallery/morsecoder.png")']
 image_width = gallery.clientWidth;
 gallery_background.style.height = image_width / (1.798);
 
+function showgallery() {
+    gallery.style.animation = "fade-in 1s forwards"
+}
+document.onload = showgallery()
+
 function checkkey(e) {
     e = e || window.event; // Use e if it exists or e will be equal to window.event
 
@@ -101,5 +106,4 @@ function left_button_press() {
 
 left_arrow.addEventListener("click", left_button_press)
 right_arrow.addEventListener("click", right_button_press)
-
 

@@ -206,6 +206,8 @@ body {
     height: 55vw;
     top: 415px;
     left: 74vw;
+    
+    position: absolute;
 }
 
 .title div {

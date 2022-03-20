@@ -21,7 +21,7 @@
         </div>
 
         <div class="foreground">
-            <div class="foreground-showcase">
+            <div class="foreground-showcase" id="foreground-showcase">
 
                 <div class="gallery-background" id="gallery-background"></div>
                 <img class="gallery" id="gallery">
@@ -37,7 +37,20 @@
                 <span class="dots-active" onclick="image_set(1)" id="dot1"></span>
                 <span class="dots" onclick="image_set(2)" id="dot2"></span>
 
-                
+                <div class="program-info-div" id="program-info-div">
+                    <div class="title-div-programinfo"></div>
+                    <p class="title-programinfo" id="title-programinfo">Descriptions</p>
+
+                    <div class="foreground-programinfo" id="foreground-programinfo">
+                        <div class="logo-images">
+                            <img src="img/imgs/wordle.png" class="wordle-logo"> 
+                        </div>
+
+                        <p class="programinfo-titles">Wordle <a class="download-link" target="_blank" href="https://github.com/Ma1war33/Wordle">[Download]</a></p>
+                        <p class="programinfo-text"><br>The game <a target="_blank" href="https://www.nytimes.com/games/wordle/index.html" class="plain-link">wordle</a>, coded in Python.</a></p>
+                    </div>
+                </div>
+
             </div>
             <div class="foreground-about">
                 <div class="image-self-div">
@@ -51,13 +64,15 @@
 
         <div class="title">
             <div class="title-div-showcase"></div>
-            <p class="title-showcase">My Projects</p>
+            <p class="title-showcase">Previews</p>
+            
         </div>
 
 
     </div>
 
     <script src="scripts/gallery-js.js"></script>
+    <script src="scripts/animations-js.js"></script>
 
     <div class="image-preload"></div>
 </body>

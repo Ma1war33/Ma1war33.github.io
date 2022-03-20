@@ -1,5 +1,9 @@
 left_arrow = document.getElementById("left-arrow");
 right_arrow = document.getElementById("right-arrow");
+
+foreground_showcase = document.getElementById("foreground-showcase");
+foreground_programinfo = document.getElementById("foreground-programinfo");
+
 gallery = document.getElementById("gallery");
 gallery_background = document.getElementById("gallery-background");
 gallery_title = document.getElementById("gallery-title");
@@ -44,7 +48,7 @@ for (let i = 0; i < number_of_images; i++) {
 }
 
 
-function arrowpos() {
+function repositioning() {
     image_width = gallery.clientWidth;
     gallery_background.style.height = image_width / (1.798);
 
@@ -55,12 +59,13 @@ function arrowpos() {
     }
 
 }
+
 function sleep() {
     return true
 }
 
-arrowpos()
-window.addEventListener("resize", arrowpos);
+repositioning()
+window.addEventListener("resize", repositioning);
 
 current_gallery_image = 1
 

@@ -101,7 +101,16 @@ body {
         transform: translateY(0);
     }
 }
-
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 .name-div {
@@ -282,8 +291,81 @@ body {
     font-family: SFPro;
     font-size: 20;
 }
+.title-div-programinfo {
+    position: absolute;
+    width: calc(100vw - 30vw);
+    top: calc();
+    background-color: black;
+
+    height: 60px;
+}
+.title-programinfo {
+    position: absolute;
+    top: calc(4px);
+    left: 2vw;
+
+    font-family: SFPro;
+    font-size: 17;
+    color: white;
+}   
+
+
 
 .image-preload {
     background: url("img/gallery/morsecoder.png") no-repeat -9999px -9999px;
 }
 
+
+.program-info-div {
+    position: absolute;
+    top: calc(100% + 2vw);
+    height:200px;
+    width:100px;
+    z-index: 10;
+
+    padding: 0;
+}
+.foreground-programinfo {
+    top: 60px;
+    background-color: white;
+    width: calc(100vw - 30vw);
+    height: 11vw;
+    position: absolute;
+}
+.logo-images {
+    position: absolute;
+    height:9vw;
+    width: 100%;
+}
+.wordle-logo {
+    width: calc(40px + 2vw);
+
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+}
+.programinfo-titles {
+    font-family: SFPro;
+    font-size: 17;
+    position: absolute;
+    left: calc(4vw + 40px);
+}
+.programinfo-text {
+    font-family: SFProRegular;
+    font-size: 17;
+
+    position: absolute;
+    left: calc(4vw + 40px);
+}
+.plain-link {
+    font-family: SFProRegular;
+    font-size: 17;
+
+    text-decoration: none;
+    color: black;
+}
+.download-link {
+    text-decoration: none;
+    color: #47699d;
+    z-index: 10;
+}

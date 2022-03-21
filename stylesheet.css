@@ -349,21 +349,23 @@ body {
 }
 .programinfo-titles-wordle {
     font-family: SFPro;
-    font-size: 17;
+    font-size: calc(16px + 0.3vw);
     position: absolute;
     left: calc(4vw + 40px);
     z-index: 2;
+    top: calc(-10px + 1vw);
 }
 .programinfo-text-wordle {
     font-family: SFProRegular;
-    font-size: 17;
+    font-size: calc(16px + 0.3vw);
 
+    top: calc(-10px + 1vw);
     position: absolute;
     left: calc(4vw + 40px);
 }
 .plain-link {
     font-family: SFProRegular;
-    font-size: 17;
+    font-size: calc(16px + 0.3vw);
 
     text-decoration: none;
     color: black;

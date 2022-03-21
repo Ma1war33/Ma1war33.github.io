@@ -326,19 +326,17 @@ body {
     height:200px;
     width:100px;
 
-    opacity: 0;
-
     padding: 0;
+
 }
 .foreground-programinfo {
     top: 60px;
     background-color: white;
     width: calc(100vw - 30vw);
-    height: 11vw;
+    height: calc(40px + 4vw);
     position: absolute;
 }
 .logo-images {
-    position: absolute;
     height:9vw;
     width: 100%;
 }
@@ -349,14 +347,14 @@ body {
     left: 1vw;
     top: 1vw;
 }
-.programinfo-titles {
+.programinfo-titles-wordle {
     font-family: SFPro;
     font-size: 17;
     position: absolute;
     left: calc(4vw + 40px);
     z-index: 2;
 }
-.programinfo-text {
+.programinfo-text-wordle {
     font-family: SFProRegular;
     font-size: 17;
 

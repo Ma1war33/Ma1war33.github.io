@@ -354,6 +354,7 @@ body {
     font-size: 17;
     position: absolute;
     left: calc(4vw + 40px);
+    z-index: 2;
 }
 .programinfo-text {
     font-family: SFProRegular;

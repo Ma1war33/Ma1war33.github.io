@@ -16,8 +16,8 @@ titles = ['Wordle - Python','Morse Code Encoder - Python']
 
 // --- End of Section ---
 
-gallery_background.style.height = 1920 / (1.798);
 image_width = gallery.clientWidth;
+gallery_background.style.height = image_width / (1.798);
 pageloaded = false;
 
 function showgallery() {

@@ -3,7 +3,7 @@ program_info_div = document.getElementById("program-info-div");
 
 
 function runonload() {
-    program_info_div.style.animation = "pop-up 1s 0s forwards";
+    program_info_div.style.animation = "pop-up 1s 0.5s forwards";
 }
 
 document.onload = runonload()

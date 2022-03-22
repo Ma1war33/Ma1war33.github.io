@@ -25,7 +25,7 @@ function showgallery() {
     gallery_title.style.animation = "fade-in 1s 0.5s forwards";
 }
 
-document.onload = showgallery()
+gallery.onload = showgallery()
 
 function checkkey(e) {
     e = e || window.event; // Use e if it exists or e will be equal to window.event

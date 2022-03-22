@@ -260,7 +260,7 @@ body {
     top: 24vw;
 
     font-family: SFPro;
-    font-size: 26;
+    font-size: calc(7px + 2vw);
     color: white;
 }
 .text-self {
@@ -333,13 +333,16 @@ body {
     top: 60px;
     background-color: white;
     width: calc(100vw - 30vw);
-    height: calc(40px + 4vw);
+    height: 0;
     position: absolute;
 }
 .logo-images {
     height:9vw;
     width: 100%;
 }
+
+
+
 .wordle-logo {
     width: calc(40px + 2vw);
 
@@ -350,6 +353,7 @@ body {
 .programinfo-titles-wordle {
     font-family: SFPro;
     font-size: calc(16px + 0.3vw);
+
     position: absolute;
     left: calc(4vw + 40px);
     z-index: 2;
@@ -363,6 +367,32 @@ body {
     position: absolute;
     left: calc(4vw + 40px);
 }
+
+
+.morsecoder-logo {
+    width: calc(40px + 2vw);
+
+    position: absolute;
+    left: 1vw;
+    top: calc(6vw + 40px);
+}
+.programinfo-titles-morsecoder {
+    font-family: SFPro;
+    font-size: calc(16px + 0.3vw);
+    position: absolute;
+    left: calc(4vw + 40px);
+    z-index: 2;
+    top: calc(30px + 6vw);
+}
+.programinfo-text-morsecoder {
+    font-family: SFProRegular;
+    font-size: calc(17px + 0.2vw);
+
+    top: calc(30px + 6vw);
+    position: absolute;
+    left: calc(4vw + 40px);
+}
+
 .plain-link {
     font-family: SFProRegular;
     font-size: calc(16px + 0.3vw);
@@ -373,4 +403,5 @@ body {
 .download-link {
     text-decoration: none;
     color: #47699d;
+    font-size: calc(12px + 0.3vw);
 }

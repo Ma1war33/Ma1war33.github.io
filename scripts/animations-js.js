@@ -2,10 +2,12 @@ window_width = window.innerWidth;
 program_info_div = document.getElementById("program-info-div");
 
 foreground_programinfo = document.getElementById("foreground-programinfo");
+loading_page = document.getElementById("loading-page");
 
 
 function runonload() {
-    program_info_div.style.animation = "pop-up 1s 0.5s forwards";
+    loading_page.style.animation = "fade-out 0.5s 0.8s forwards";
+    program_info_div.style.animation = "pop-up 1s 0s forwards";
 }
 
 window.addEventListener("load", event =>{

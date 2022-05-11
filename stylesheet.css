@@ -80,7 +80,7 @@ body {
     top: calc(50vh - 17px);
     left: calc(50vw - 35px - 40px);
     width: 70px;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     opacity: 1;
     
@@ -90,12 +90,21 @@ body {
     top: calc(50vh - 17px);
     left: calc(50vw - 75px);
     width: 150px;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     opacity: 0.1;
 
 }
+.loading_message {
+    top: calc(50vh - 10px);
+    left: calc(50vw - 60px);
+    position: fixed;
+    z-index: 1000;
 
+    font-family: SFPro;
+    font-size: 20;
+    opacity: 0;
+}
 
 
 
@@ -396,7 +405,7 @@ body {
     width:100px;
 
     padding: 0;
-
+    z-index: 100;
 }
 .foreground-programinfo {
     top: 60px;

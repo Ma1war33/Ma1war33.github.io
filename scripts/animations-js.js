@@ -11,7 +11,6 @@ function runonload() {
 window.addEventListener("load", event =>{
     isLoaded = gallery.style.content.complete && gallery.style.content.naturalHeight !== 0;
     runonload()
-    alert("Image Loaded.")
 });
 
 function repositioning() {

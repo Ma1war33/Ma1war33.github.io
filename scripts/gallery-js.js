@@ -21,11 +21,14 @@ gallery_background.style.height = image_width / (1.798);
 pageloaded = false;
 
 function showgallery() {
-    gallery.style.animation = "fade-in 1s 0.5s forwards";
-    gallery_title.style.animation = "fade-in 1s 0.5s forwards";
+    gallery.style.animation = "fade-in 0.5s 0s forwards";
+    gallery_title.style.animation = "fade-in 0.5s 0s forwards";
 }
 
-gallery.style.content.onload = showgallery()
+window.addEventListener("load", event =>{
+    isLoaded = gallery.style.content.complete && gallery.style.content.naturalHeight !== 0;
+    showgallery()
+});
 
 function checkkey(e) {
     e = e || window.event; // Use e if it exists or e will be equal to window.event

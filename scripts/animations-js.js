@@ -4,10 +4,15 @@ program_info_div = document.getElementById("program-info-div");
 foreground_programinfo = document.getElementById("foreground-programinfo");
 loading_page = document.getElementById("loading-page");
 
+main_page = document.getElementById("main_page");
+navbar = document.getElementById("navbar");
+
 
 function runonload() {
-    loading_page.style.animation = "fade-out 0.5s 0.8s forwards";
-    program_info_div.style.animation = "pop-up 1s 0s forwards";
+    loading_page.style.animation = "fade-out 0.4s 0.8s forwards";
+    main_page.style.animation = "large_pop_up 1s 0.8s forwards cubic-bezier(0,.91,.26,1)";
+    navbar.style.animation = "large_pop_down 0.5s 0.8s forwards cubic-bezier(0,.91,.26,1)";
+    //program_info_div.style.animation = "pop-up 1s 0s forwards";
 }
 
 window.addEventListener("load", event =>{

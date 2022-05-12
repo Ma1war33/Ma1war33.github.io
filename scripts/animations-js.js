@@ -22,7 +22,7 @@ function sleep1 (){
 
 function runonload() {
     loading_page.style.animation = "fade-out 0.4s 0.8s";
-    main_page.style.animation = "large_pop_up 1s 0.8ss forwards cubic-bezier(0,.91,.26,1)";
+    main_page.style.animation = "large_pop_up 1s 0.8s forwards cubic-bezier(0,.91,.26,1)";
     navbar.style.animation = "large_pop_down 0.5s 0.8s forwards cubic-bezier(0,.91,.26,1)";
     program_info_div.style.animation = "fade-in 1s 0s forwards";
     setTimeout(sleep1, 1200)

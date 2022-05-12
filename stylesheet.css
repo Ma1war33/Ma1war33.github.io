@@ -344,7 +344,7 @@ body {
     background-color: black;
 
     right: 2vw;
-    height: 60vw;
+    height: calc(29vw + 10px);
     top: 415px;
     left: 74vw;
     position: absolute;
@@ -358,22 +358,29 @@ body {
     position: relative;
 }
 .name-self {
-    left: 2vw;
+    left: 1.5vw;
     right: 5px;
     position: absolute;
-    top: 24vw;
+    top: 23vw;
 
     font-family: SFPro;
     font-size: calc(7px + 2vw);
     color: white;
 }
+.text-self-div{
+
+    width: 100%;
+    top: calc(24vw + 8% + 4px);
+    height: calc(108% - 24vw + 4px);
+
+    inline-size: 93%;
+}
 .text-self {
-    left: 8px;
+    left: 1vw;
     right: 8px;
     position: relative;
-    top: calc(22vw + 70px);
     font-family: SFProRegular;
-    font-size: 15;
+    font-size: calc(1vw + 3px);
     color: white;
 }
 
@@ -402,7 +409,6 @@ body {
 .title-div-programinfo {
     position: absolute;
     width: calc(100vw - 30vw);
-    top: calc();
     background-color: black;
 
     height: 60px;

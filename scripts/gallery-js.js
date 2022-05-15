@@ -9,9 +9,13 @@ gallery_background = document.getElementById("gallery-background");
 gallery_title = document.getElementById("gallery-title");
 gallery_title_div = document.getElementById("gallery-title-div");
 
+imagepreload = document.getElementById("a");
+imagepreload2 = document.getElementById("image-preload2");
+
 // --- Setting Variables ---
 number_of_images = 2
 images = ['url("img/gallery/wordle.png")', 'url("img/gallery/morsecoder.png")']
+images_mini = ['url("img/gallery/wordle_mini.png")', 'url("img/gallery/morsecoder_mini.png")']
 titles = ['Wordle - Python','Morse Code Encoder - Python']
 
 // --- End of Section ---
@@ -20,15 +24,22 @@ image_width = gallery.clientWidth;
 gallery_background.style.height = image_width / (1.798);
 pageloaded = false;
 
-function showgallery() {
-    gallery.style.animation = "fade-in 0.5s 0s forwards";
-    gallery_title.style.animation = "fade-in 0.5s 0s forwards";
+gallery.style.animation = "fade-in 0s 0s forwards";
+gallery_title.style.animation = "fade-in 0s 0s forwards";
+
+imagesloaded = false
+function upgradegallery() {
+    imagesloaded = true
+    gallery_change = 0
+    image_change()
+
 }
 
 window.addEventListener("load", event =>{
-    isLoaded = gallery.style.content.complete && gallery.style.content.naturalHeight !== 0;
-    showgallery()
+    isLoaded = imagepreload.style.content.complete && imagepreload.style.content.naturalHeight !== 0
+    upgradegallery()
 });
+
 
 function checkkey(e) {
     e = e || window.event; // Use e if it exists or e will be equal to window.event
@@ -90,7 +101,12 @@ function update_dots(x) {
 
 function image_set(x) {
     current_gallery_image = x
-    gallery.style.content = images[current_gallery_image - 1]
+    if (imagesloaded){
+        gallery.style.content = images[current_gallery_image - 1]
+    }
+    else {
+        gallery.style.content = images_mini[current_gallery_image - 1]
+    }
     gallery_title.innerHTML = titles[current_gallery_image - 1]
 
     update_dots(current_gallery_image)
@@ -100,14 +116,34 @@ function image_change() {
     if (gallery_change==1 && current_gallery_image!=number_of_images) {
 
         current_gallery_image = current_gallery_image + 1
-        gallery.style.content = images[current_gallery_image - 1]
+        if (imagesloaded){
+            gallery.style.content = images[current_gallery_image - 1]
+        }
+        else {
+            gallery.style.content = images_mini[current_gallery_image - 1]
+        }
         gallery_title.innerHTML = titles[current_gallery_image - 1]
     }
     if (gallery_change==-1 && current_gallery_image!=1) {
 
         current_gallery_image = current_gallery_image - 1
-        gallery.style.content = images[current_gallery_image - 1]
+        if (imagesloaded){
+            gallery.style.content = images[current_gallery_image - 1]
+        }
+        else {
+            gallery.style.content = images_mini[current_gallery_image - 1]
+        }
         gallery_title.innerHTML = titles[current_gallery_image - 1]
+    }
+
+    if (gallery_change==0) {
+
+        if (imagesloaded){
+            gallery.style.content = images[current_gallery_image - 1]
+        }
+        else {
+            gallery.style.content = images_mini[current_gallery_image - 1]
+        }
     }
 
     update_dots(current_gallery_image)

@@ -410,6 +410,13 @@ body {
     top: 0;
     width: 100%;
 }
+.image-preload3 {
+    position: absolute;
+    content: url("img/gallery/morsecoder_mini.png");
+    z-index: -10;
+    top: 0;
+    width: 100%;
+}
 
 
 

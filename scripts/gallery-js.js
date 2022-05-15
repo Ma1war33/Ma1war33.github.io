@@ -9,7 +9,7 @@ gallery_background = document.getElementById("gallery-background");
 gallery_title = document.getElementById("gallery-title");
 gallery_title_div = document.getElementById("gallery-title-div");
 
-imagepreload = document.getElementById("a");
+imagepreload = document.getElementById("image-preload");
 imagepreload2 = document.getElementById("image-preload2");
 
 // --- Setting Variables ---
@@ -36,7 +36,7 @@ function upgradegallery() {
 }
 
 window.addEventListener("load", event =>{
-    isLoaded = imagepreload.style.content.complete && imagepreload.style.content.naturalHeight !== 0
+    isLoaded = imagepreload2.style.content.complete && imagepreload.style.content.naturalHeight !== 0
     upgradegallery()
 });
 

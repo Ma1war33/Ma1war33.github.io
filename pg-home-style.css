@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'SFProBold';
+    src: url(fonts/SFPRODISPLAYBOLD.woff);
+}
+@font-face {
+    font-family: 'SFPro';
+    src: url(fonts/SFPRODISPLAYREGULAR.woff);
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    margin:0;
+    background-color: #252930;
+}
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    opacity: 0;
+    animation: 2s 0.1s 1  fade-in forwards;
+}
+.section {
+    scroll-snap-align: start;
+    overflow: hidden;
+    height: 100vh;
+    position: sticky;
+    top:0;
+}
+
+
+
+.top {
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+.splash {
+    color: white;
+    font-family: 'SFProBold';
+    font-size: 80px;
+    text-align: center;
+
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: calc(50vh - 80px);
+
+    z-index: 1;
+}
+.undertext {
+    color: white;
+    font-family: 'SFPro';
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.9;
+
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: calc(50vh + 10px);
+
+    z-index: 1;
+}
+.projects-button {
+    background-color: #809DAB;
+    box-shadow: 0 5px 0 #556972;
+    border: none;
+    text-align: center;
+    display: inline-block;
+
+    padding: 20px;
+    width: 60px;
+    height: 45px;
+    border-radius: 15px;
+
+    transition: 0.1s ease-in-out;
+    transition-property: box-shadow, transform;
+
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: calc(50vh + 60px);
+    margin-left: calc(50vw - 42.5px);
+    
+    z-index: 3;
+
+}   
+.projects-button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+.material-symbols-outlined {
+    transform: scale(1.5);
+    color: white;
+    display: block;
+    position: relative;
+    left: -6%;
+    top:-9;
+    
+}
+
+
+.projects {
+    background-color: #E3E6E0;
+    height: 100vh;
+
+    z-index: 2;
+}
+.projects-splash {
+    color: #809DAB;
+    font-family: 'SFProBold';
+    font-size: 60px;
+    text-align: center;
+
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: calc(50vh - 300px);
+    text-shadow: 0 2px 0 #556972;
+
+    z-index: 1;
+}
+
+
+
+
+.bottom {
+    height: 20vh;
+    background-color: #252930;
+    scroll-snap-align: end;
+
+    z-index: 3;
+}

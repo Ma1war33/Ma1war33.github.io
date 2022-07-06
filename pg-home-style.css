@@ -18,20 +18,25 @@
 body {
     margin:0;
     background-color: #252930;
-    overflow: hidden;
+
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 .container {
     height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    /*overflow-y: scroll;
+    scroll-snap-type: y mandatory;*/
     opacity: 0;
     animation: 2s 0.1s 1  fade-in forwards;
 }
 .section {
-    scroll-snap-align: start;
+    /*scroll-snap-align: start;*/
     overflow: hidden;
     height: 100vh;
-    position: sticky;
+    /*position: sticky;*/
     top:0;
 }
 
@@ -43,10 +48,13 @@ body {
     display: grid;
 }
 .splash {
-    color: white;
-    font-family: 'SFProBold';
+    font-family: motiva-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
     font-size: 80px;
+    
     text-align: center;
+    color: white;
 
     grid-column: 1;
     grid-row: 1;
@@ -55,15 +63,18 @@ body {
     z-index: 1;
 }
 .undertext {
-    color: white;
-    font-family: 'SFPro';
+    font-family: motiva-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 18px;
+
+    color: white;
     text-align: center;
     opacity: 0.9;
 
     grid-column: 1;
     grid-row: 1;
-    margin-top: calc(50vh + 10px);
+    margin-top: calc(50vh);
 
     z-index: 1;
 }
@@ -105,37 +116,44 @@ body {
 }
 
 
-.projects {
-    background-color: #E3E6E0;
-    height: 100vh;
+.projects-bg {
+    background-color: #1B1B1B;
+    height: 120vh;
 
     z-index: 2;
 }
-.projects-splash {
-    color: #809DAB;
-    font-family: 'SFProBold';
-    font-size: 40px;
-    text-align: left;
-    padding-left: 2vw;
-    padding-right: 1vw;
-    
+.projects {
+    background-color: #E3E6E0;
+    height: 80vh;
+    top: 40vh;
+    position: relative;
+}
 
+.projects-splash {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 60px;
+
+    color: #1B1B1B;
+    text-align: center;
+    
+    padding-left: 2vw;
+    padding-right: 2vw;
     grid-column: 1;
     grid-row: 1;
-    margin-top: calc(50vh - 300px);
-    text-shadow: 0 2px 0 #556972;
+    /*text-shadow: 0 2px 0 #556972;*/
 
     z-index: 1;
-    transform: translateY(-20px);
+    transform: translateY(60px);
 }
 
 
 
 
 .bottom {
-    height: 20vh;
-    background-color: #252930;
-    scroll-snap-align: end;
+    height: 30vh;
+    background-color: #1B1B1B;
 
     z-index: 3;
 }

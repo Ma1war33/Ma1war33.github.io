@@ -48,7 +48,8 @@ body {
 
     grid-column: 1;
     grid-row: 1;
-    margin-top: calc(50vh - 60px - 2vw);
+    /*margin-top: calc(50vh - 60px - 2vw);*/
+    margin-top: calc(50vh - 1em);
 
     z-index: 1;
 }
@@ -85,7 +86,7 @@ body {
 
     grid-column: 1;
     grid-row: 1;
-    margin-top: calc(50vh + 60px);
+    margin-top: calc(50vh + 15px + 0.5vw + 2em);
     margin-left: calc(50vw - 42.5px);
     
     z-index: 3;

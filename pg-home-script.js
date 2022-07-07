@@ -5,13 +5,11 @@ interval_btn = document.getElementById("interval-button");
 projects = document.getElementById("projects-sec");
 
 var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
-if (isSafari == true) {
-    alert("Features on this website may not work as intended on this browser, we recommend using one such as chrome.")
-} 
 
 top_btn.addEventListener('click', e => {
     if (isSafari == true) {
         seamless.scrollIntoView(interval, {behavior: 'smooth'})
+        console.log("safari-anim")
     }
     else {
         interval.scrollIntoView({behavior: 'smooth'});
@@ -21,6 +19,7 @@ top_btn.addEventListener('click', e => {
 interval_btn.addEventListener('click', e => {
     if (isSafari == true) {
         seamless.scrollIntoView(projects, {behavior: 'smooth'})
+        console.log("safari-anim")
     }
     else {
         projects.scrollIntoView({behavior: 'smooth'});

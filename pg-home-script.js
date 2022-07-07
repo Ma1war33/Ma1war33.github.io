@@ -1,6 +1,20 @@
-projects_btn = document.getElementById("projects-button");
-projects = document.getElementById("projects");
+top_btn = document.getElementById("top-button");
+interval = document.getElementById("interval-sec");
 
-projects_btn.addEventListener('click', e => {
+interval_btn = document.getElementById("interval-button");
+projects = document.getElementById("projects-sec");
+
+top_btn.addEventListener('click', e => {
+    interval.scrollIntoView({behavior: 'smooth'});
+})
+
+interval_btn.addEventListener('click', e => {
     projects.scrollIntoView({behavior: 'smooth'});
 })
+
+function on_resize() {
+
+}
+
+on_resize()
+window.addEventListener('resize', on_resize) 

@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    background-color: #2f3e46;
+
+    height:100vh;
+    width: 100vw;
+
+}
+
+.splash {
+    width: 80%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 700;
+
+    font-size: calc(2em + 2vw);
+
+    color: white;
+
+}
+h1::selection {
+    background-color: grey;
+}
+
+p {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 400;
+    font-size: calc(1em + 0.5vw);
+    
+    color: #cad2c5;
+    margin-top: calc(-1em - 1vw);;
+}
+p::selection {
+    background-color: grey;
+}
+
+a {
+    text-decoration: none;
+    color: #cad2c5;
+    transition: color 0.1s;
+}
+a::selection {
+    background-color: grey;
+}
+a:hover {
+    color: #84a98c;
+}
+.splash-image {
+    width: 30%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

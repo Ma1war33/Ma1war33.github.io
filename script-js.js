@@ -92,6 +92,7 @@ window.addEventListener("scroll", e => {
     
                         x = Math.floor((scrollY - movementLines[i][0]) / (AreaLength / 7) + 1)
                         wordle_img.src=`Images/wordle/${x}.webp`
+                        console.log(`Images/wordle/${x}.webp`)
     
 
                     }

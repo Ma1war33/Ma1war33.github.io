@@ -12,8 +12,6 @@ body {
     text-align: center;
     color:white;
 
-    margin-top:calc(50% - 17.5vh);
-    transform: translateY(-50%);
     text-decoration:underline;
 }
 .undertext {
@@ -23,13 +21,12 @@ body {
     text-align: center;
     color:white;
 
-    margin-top:-10vh;
+    margin-top: -5vh;
 }
 .socials-div {
     position: absolute;
     left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%)
 
 }
 .social-item {

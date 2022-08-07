@@ -1,26 +1,26 @@
 data = [
     {
-        "image":"Images/instagram.png",
+        "image":"socials/instagram.png",
         "title":"@danil.eliasov"
     },
     {
-        "image":"Images/snapchat.png",
+        "image":"socials/snapchat.png",
         "title":"@ma1war33"
     },
     {
-        "image":"Images/tiktok.png",
+        "image":"socials/tiktok.png",
         "title":"@ma1war3__"
     },
     {
-        "image":"Images/discord.png",
+        "image":"socials/discord.png",
         "title":"ma1war3#9999"
     },
     {
-        "image":"Images/gmail.png",
+        "image":"socials/gmail.png",
         "title":"danil.r.eliasov"
     },
     {
-        "image":"Images/messages.png",
+        "image":"socials/messages.png",
         "title":"+44 7543184257"
     }
 ]

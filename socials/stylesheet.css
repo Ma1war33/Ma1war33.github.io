@@ -12,7 +12,8 @@ body {
     text-align: center;
     color:white;
 
-    margin-top: 3.5vh;
+    margin-top:calc(50% - 17.5vh);
+    transform: translateY(-50%);
     text-decoration:underline;
 }
 .undertext {
@@ -22,7 +23,7 @@ body {
     text-align: center;
     color:white;
 
-    margin-top:-4vh;
+    margin-top:-10vh;
 }
 .socials-div {
     position: absolute;

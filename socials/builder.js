@@ -15,12 +15,12 @@ data = [
     {
         "image":"socials/tiktok.webp",
         "title":"@ma1war3__",
-        "link":"https://twitter.com/ma1war3"
+        "link":"https://www.tiktok.com/@ma1war3__?_t=8Udpgtz4bEz&_r=1"
     },
     {
         "image":"socials/twitter.webp",
         "title":"@ma1war3",
-        "link":"https://www.tiktok.com/@ma1war3__?_t=8Udpgtz4bEz&_r=1"
+        "link":"https://twitter.com/ma1war3"
     },
     {
         "image":"socials/discord.webp",

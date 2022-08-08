@@ -106,17 +106,6 @@ if (hash(queryString) == "1598217186") {
 
 } else {
 
-    function waitForElement(){
-        endTime = new Date();
-        var timeDiff = endTime - startTime; //in ms
-        timeDiff /= 1000;
-
-        if(timeDiff >= 0.8){
-            window.location.replace("https://danileliasov.com/socials/denied");
-        } else{
-            setTimeout(waitForElement, 100);
-        }
-    }
-    
-    waitForElement()
+    window.location.replace("https://danileliasov.com/socials/denied");
+}
 }

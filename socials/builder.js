@@ -28,11 +28,6 @@ data = [
         "link":"https://discord.com/users/369772717550862337"
     },
     {
-        "image":"socials/gmail.webp",
-        "title":"danil.r.eliasov",
-        "link":"mailto:danil.r.eliasov@gmail.com"
-    },
-    {
         "image":"socials/messages.webp",
         "title":"+44 7543184257",
         "link":""

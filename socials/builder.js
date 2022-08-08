@@ -54,6 +54,11 @@ function hash(str) {
     
 };
 
+windowloaded = false
+window.onload = function() {
+    windowloaded = true
+}
+
 if (hash(queryString) == "1598217186") {
 
     function waitForElement(){
@@ -104,6 +109,5 @@ if (hash(queryString) == "1598217186") {
     waitForElement()
 
 } else {
-    console.log("asdasd")
     window.location.replace("https://danileliasov.com/socials/denied");
 }

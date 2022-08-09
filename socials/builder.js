@@ -1,7 +1,7 @@
 var startTime, endTime
 startTime = new Date();
 
-fetch("http://danileliasov-data.eu-west-2.elasticbeanstalk.com")
+fetch("social-data.json")
     .then((response) => response.json())
     .then((data) => {
 

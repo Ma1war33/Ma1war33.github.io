@@ -1,7 +1,7 @@
 var startTime, endTime
 startTime = new Date();
 
-fetch("social-data.json")
+fetch("https://danileliasov-https.herokuapp.com/")
     .then((response) => response.json())
     .then((data) => {
 

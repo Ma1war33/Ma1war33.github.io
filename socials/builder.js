@@ -2,7 +2,7 @@ var startTime, endTime
 startTime = new Date();
 
 fetch("https://danileliasov-https.herokuapp.com/")
-    .then((response) => console.log(response.json()))
+    .then((response) => response.json())
     .then((data) => {
 
         var queryString = window.location.search;

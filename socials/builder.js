@@ -1,11 +1,9 @@
 var startTime, endTime
 startTime = new Date();
 
-var data 
-fetch("https://raw.githubusercontent.com/Ma1war33/danileliasov.com/main/socials/data.json")
+fetch("http://danileliasov-data.eu-west-2.elasticbeanstalk.com")
     .then((response) => response.json())
-    .then((json) => {
-        data = json
+    .then((data) => {
 
         var queryString = window.location.search;
         queryString = queryString.replace("?", "")

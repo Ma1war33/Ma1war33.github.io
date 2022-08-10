@@ -5,81 +5,86 @@ var queryString = window.location.search;
 queryString = queryString.replace("?", "")
 
 var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
+    
+(async () => {
+    const rawResponse = await fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`, {
+        method: 'GET',
+        body: JSON.stringify({a: 1, b: 'Textual content'})
+    });
+    const content = await rawResponse.json();
+    
+    console.log(content);
+})();
 
-fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
-    .then((response) => {
+function temp () {
+    if (response.status == 200) {
 
-        response_var = response
+        function buildPage(data) {
 
-        if (response.status == 200) {
+            console.log(data)
 
-            function buildPage(data) {
+            function waitForElement(){
+                endTime = new Date();
+                var timeDiff = endTime - startTime; //in ms
+                timeDiff /= 1000;
 
-                console.log(data)
-        
-                function waitForElement(){
-                    endTime = new Date();
-                    var timeDiff = endTime - startTime; //in ms
-                    timeDiff /= 1000;
-        
-                    
-                    if(timeDiff >= 0) {
-    
-                        for (let i = 0; i < data.length; i++) {
-    
-                            var link = document.createElement("a");
-                            link.href = data[i].link;
-                            link.classList.add("link");
-                            if (data[i].link != "") {
-                                link.target = "_blank"
-                            }
-    
-                            var div = document.createElement("div");
-                            div.classList.add("social-item");
-                            div.style.animation = `0.5s ${(0.1* i)+0.25}s 1 pop-in forwards ease-out`
-    
-                            var div_text = document.createElement("p");
-                            div_text.innerHTML = data[i].title;
-                            div_text.classList.add("social-item-text");
-    
-                            var div_image = document.createElement("img");
-                            div_image.src = data[i].image;
-                            div_image.classList.add("social-item-image");
-    
-                            var div_text_div = document.createElement("div");
-                            div_text_div.classList.add("socials-text-div");
-    
-                            document.getElementById("socials-div").appendChild(link).appendChild(div).appendChild(div_image)
-                            div.appendChild(div_text_div).appendChild(div_text);
-    
+                
+                if(timeDiff >= 0) {
+
+                    for (let i = 0; i < data.length; i++) {
+
+                        var link = document.createElement("a");
+                        link.href = data[i].link;
+                        link.classList.add("link");
+                        if (data[i].link != "") {
+                            link.target = "_blank"
                         }
-    
-                        function gotosocials() {
-                            document.body.removeChild(document.getElementById("auth-div"));
-                            document.getElementById("title-div").style.opacity = "1";
-                        }
-                        
-                        setTimeout(gotosocials, 200)
+
+                        var div = document.createElement("div");
+                        div.classList.add("social-item");
+                        div.style.animation = `0.5s ${(0.1* i)+0.25}s 1 pop-in forwards ease-out`
+
+                        var div_text = document.createElement("p");
+                        div_text.innerHTML = data[i].title;
+                        div_text.classList.add("social-item-text");
+
+                        var div_image = document.createElement("img");
+                        div_image.src = data[i].image;
+                        div_image.classList.add("social-item-image");
+
+                        var div_text_div = document.createElement("div");
+                        div_text_div.classList.add("socials-text-div");
+
+                        document.getElementById("socials-div").appendChild(link).appendChild(div).appendChild(div_image)
+                        div.appendChild(div_text_div).appendChild(div_text);
+
                     }
-                    else{
-                        setTimeout(waitForElement, 100);
+
+                    function gotosocials() {
+                        document.body.removeChild(document.getElementById("auth-div"));
+                        document.getElementById("title-div").style.opacity = "1";
                     }
                     
-                    
+                    setTimeout(gotosocials, 200)
                 }
-        
-                waitForElement()
-        
+                else{
+                    setTimeout(waitForElement, 100);
+                }
+                
+                
             }
 
-            buildPage(response_var.json())
-        
-        } else {
-            console.log(response_var)
-            console.log(response_var.status)
-            console.log(response_var.json)
-            //window.location.replace("https://danileliasov.com/access-denied");
+            waitForElement()
+
         }
 
-    })
-    
+        buildPage(response_var.json())
+
+    } else {
+        console.log(response_var)
+        console.log(response_var.status)
+        console.log(response_var.json)
+        //window.location.replace("https://danileliasov.com/access-denied");
+    }
+
+}

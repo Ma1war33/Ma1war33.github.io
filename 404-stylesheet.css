@@ -64,3 +64,10 @@ a:hover {
     }
 
 }
+
+@media (max-width: 400px) {
+    .splash-image {
+        width: 100%;
+    }
+
+}

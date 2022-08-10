@@ -108,7 +108,7 @@ var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
     const rawResponse = await fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`);
     const content = await rawResponse.json();
     
-    console.log(content);
+    console.log(content[0].title);
 })();
 
 function temp () {

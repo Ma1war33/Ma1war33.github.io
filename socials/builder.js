@@ -24,7 +24,7 @@ if (queryStringHash == "124b507af6dcce7e207793ae021068c20958fcfddea9e570eb22081b
 
                 Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
                 
-                    if(timeDiff >= 0.8){
+                    if(timeDiff >= 0.6){
 
                         for (let i = 0; i < data.length; i++) {
 

@@ -77,7 +77,7 @@ fetch(`https://danileliasov-https.herokuapp.com/key=${hash(queryString)}`)
             waitForElement()
 
         } else {
-            //window.location.replace("https://danileliasov.com/socials/denied");
+            window.location.replace("https://danileliasov.com/socials/denied");
         }
     });
 

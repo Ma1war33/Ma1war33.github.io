@@ -170,7 +170,12 @@
         const content = await rawResponse.json();
         console.log(content);
 
-        buildPage(content)
+        try {
+            buildPage(content)
+        }
+        catch (error) {
+            console.log(error)
+        }
     
     } catch {
         console.log('Access Denied.')

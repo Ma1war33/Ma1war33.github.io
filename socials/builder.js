@@ -6,10 +6,12 @@ queryString = queryString.replace("?", "")
 
 var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
 
-var response = fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
+response = fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
     .then(e => {
 
-        if (response.status == 200) {} else {
+        if (response.status == 200) {
+            console.log(response.status)
+        } else {
             window.location.replace("https://danileliasov.com/access-denied");
         }
 

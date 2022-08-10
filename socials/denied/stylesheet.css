@@ -55,5 +55,12 @@ a:hover {
 .splash-image {
     margin-left:50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 40%;
+}
+
+@media (max-width: 900px) {
+    .splash-image {
+        width: 80%;
+    }
+
 }

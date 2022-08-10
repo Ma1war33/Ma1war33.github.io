@@ -57,3 +57,10 @@ a:hover {
     transform: translateX(-50%);
     width: 40%;
 }
+
+@media (max-width: 900px) {
+    .splash-image {
+        width: 80%;
+    }
+
+}

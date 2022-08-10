@@ -12,9 +12,6 @@ fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
         response_var = response
 
         if (response.status == 200) {
-            console.log(response_var)
-            console.log(response_var.status)
-            console.log(response_var.json())
 
             function buildPage(data) {
 

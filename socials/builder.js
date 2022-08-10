@@ -5,23 +5,18 @@ var queryString = window.location.search;
 queryString = queryString.replace("?", "")
 
 var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
-var KeyValid = false
 
-fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
-    .then((response) => {
+var response = fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
+    .then(e => {
 
-        if (response.status == 200) {
-            KeyValid = true
-            console.log(response.json())
-            return response.json()
-        } else {
-            KeyValid = false
+        if (response.status == 200) {} else {
             window.location.replace("https://danileliasov.com/access-denied");
         }
 
     })
-    .then((data) => {
+    .then(e => {
 
+        data = response.json()
 
         windowloaded = false
         window.onload = function() {

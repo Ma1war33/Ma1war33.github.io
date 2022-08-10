@@ -99,16 +99,13 @@
         }
         return result;
     };
-    
+
     var queryString = window.location.search;
     queryString = queryString.replace("?", "")
 
 var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
 
-    const rawResponse = await fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`, {
-        method: 'GET',
-        body: JSON.stringify({a: 1, b: 'Textual content'})
-    });
+    const rawResponse = await fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`);
     const content = await rawResponse.json();
     
     console.log(content);

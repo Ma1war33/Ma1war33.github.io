@@ -1,6 +1,23 @@
 var startTime, endTime
 startTime = new Date();
 
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+preload(
+    "socials/discord.webp",
+    "socials/instagram.webp",
+    "socials/messages.webp",
+    "socials/snapchat.webp",
+    "socials/tiktok.webp",
+    "socials/twitter.webp",
+)
+
 var queryString = window.location.search;
 queryString = queryString.replace("?", "")
 

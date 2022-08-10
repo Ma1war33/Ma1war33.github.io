@@ -12,7 +12,7 @@ function sha256(ascii) {
     var words = [];
     var asciiBitLength = ascii[lengthProperty]*8;
     
-    //* caching results is optional - remove/add slash from front of this line to toggle
+    /* caching results is optional - remove/add slash from front of this line to toggle
     // Initial hash value: first 32 bits of the fractional parts of the square roots of the first 8 primes
     // (we actually calculate the first 64, but extra values are just ignored)
     var hash = sha256.h = sha256.h || [];
@@ -94,3 +94,5 @@ function sha256(ascii) {
     }
     return result;
 };
+
+//A hashing algorithm (sha256) from https://geraintluff.github.io/sha256/

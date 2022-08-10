@@ -68,5 +68,28 @@ if (queryStringHash == "124b507af6dcce7e207793ae021068c20958fcfddea9e570eb22081b
 
         });
 } else {
-    window.location.replace("https://danileliasov.com/access-denied");
+    //window.location.replace("https://danileliasov.com/access-denied");
 }
+
+function notify(notification) {
+    //var div = document.createElement("div");
+    //div.classList.add("notif-div")
+    console.log(notification.title, notification.text)
+}
+
+notifications = {
+    large_size:{
+        'title':'Warning',
+        'text':''
+    },
+    text_notif:{
+        'title':'',
+        'text':''
+    }
+}
+window.addEventListener("resize", e => {
+    if (window.innerWidth() > 1000) {
+
+        notify(notification.large_size)
+    }
+})

@@ -9,6 +9,7 @@ var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
 fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
     .then((response) => {
 
+
         if (response.status == 200) {
             console.log(response.status)
 
@@ -78,7 +79,10 @@ fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
             buildPage(response.json())
         
         } else {
-            window.location.replace("https://danileliasov.com/access-denied");
+            console.log(response)
+            console.log(response.status)
+            console.log(response.json)
+            //window.location.replace("https://danileliasov.com/access-denied");
         }
 
     })

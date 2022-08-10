@@ -101,9 +101,6 @@
     };
 
     function buildPage(data) {
-
-        console.log(data)
-
         for (let i = 0; i < data.length; i++) {
 
             var link = document.createElement("a");
@@ -145,7 +142,6 @@
 
     var queryString = window.location.search;
     queryString = queryString.replace("?", "")
-
     var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
 
     try {
@@ -158,6 +154,7 @@
         }
         catch (error) {
             console.log(error)
+            window.location.replace("https://danileliasov.com/404");
         }
     
     } catch {

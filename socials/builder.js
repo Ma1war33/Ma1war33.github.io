@@ -4,21 +4,22 @@ startTime = new Date();
 var queryString = window.location.search;
 queryString = queryString.replace("?", "")
 
-function hash(str) {
-    var hash = 0, i, chr;
-    if (str.length === 0) return hash;
-    for (i = 0; i < str.length; i++) {
-    chr   = str.charCodeAt(i);
-    hash  = ((hash << 5) - hash) + chr;
-    hash |= 0; // Convert to 32bit integer
-    }
-    return hash;
-    
-};
+//function hash(str) {
+//    var hash = 0, i, chr;
+//    if (str.length === 0) return hash;
+//    for (i = 0; i < str.length; i++) {
+//    chr   = str.charCodeAt(i);
+//    hash  = ((hash << 5) - hash) + chr;
+//    hash |= 0; // Convert to 32bit integer
+//    }
+//   return hash;
+//};
 
-if (hash(queryString) == "1598217186") {
+var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
 
-    fetch(`https://danileliasov-https.herokuapp.com/key=${hash(queryString)}`)
+if (queryStringHash == "124b507af6dcce7e207793ae021068c20958fcfddea9e570eb22081bceff74e3") {
+
+    fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
         .then((response) => response.json())
         .then((data) => {
 
@@ -78,5 +79,5 @@ if (hash(queryString) == "1598217186") {
 
         });
 } else {
-    window.location.replace("https://danileliasov.com/socials/denied");
+    window.location.replace("https://danileliasov.com/access-denied");
 }

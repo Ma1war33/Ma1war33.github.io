@@ -109,6 +109,7 @@ var queryStringHash = sha256(queryString.concat("HTXkROWmel"))
     const content = await rawResponse.json();
     
     console.log(content[0].title);
+    console.log(content[0].link);
 })();
 
 function temp () {

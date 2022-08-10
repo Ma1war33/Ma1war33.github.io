@@ -11,9 +11,13 @@ fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
 
 
         if (response.status == 200) {
+            console.log(response)
             console.log(response.status)
+            console.log(response.json())
 
             function buildPage(data) {
+
+                console.log("asd")
 
                 windowloaded = false
                 window.onload = function() {

@@ -10,20 +10,13 @@ var KeyValid = false
 fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
     .then((response) => {
 
-        console.log(response)
-        
         if (response.status == 200) {
             KeyValid = true
-            response = response.json()
-
-            console.log("Access Granted")
-            console.log(response)
-
+            console.log(response.json())
+            return response.json()
         } else {
             KeyValid = false
             window.location.replace("https://danileliasov.com/access-denied");
-
-            console.log("Access Denied")
         }
 
     })

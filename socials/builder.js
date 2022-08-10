@@ -1,24 +1,6 @@
 var startTime, endTime
 startTime = new Date();
 
-var images = [];
-function preload() {
-    for (var i = 0; i < arguments.length; i++) {
-        images[i] = new Image();
-        images[i].classList.add("social-item-image")
-        images[i].src = preload.arguments[i];
-    }
-}
-
-preload(
-    "socials/discord.webp",
-    "socials/instagram.webp",
-    "socials/messages.webp",
-    "socials/snapchat.webp",
-    "socials/tiktok.webp",
-    "socials/twitter.webp",
-)
-
 var queryString = window.location.search;
 queryString = queryString.replace("?", "")
 
@@ -57,7 +39,7 @@ if (queryStringHash == "124b507af6dcce7e207793ae021068c20958fcfddea9e570eb22081b
 
                             var div = document.createElement("div");
                             div.classList.add("social-item");
-                            div.style.animation = `0.5s ${0.1* i}s 1 pop-in forwards ease-out`
+                            div.style.animation = `0.5s ${(0.1* i) + 0.2}s 1 pop-in forwards ease-out`
 
                             var div_text = document.createElement("p");
                             div_text.innerHTML = data[i].title;

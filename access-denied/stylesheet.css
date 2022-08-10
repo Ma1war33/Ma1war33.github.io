@@ -13,7 +13,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-40%, -50%);
 }
 
 h1 {
@@ -58,7 +58,7 @@ a:hover {
     width: 40%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
     .splash-image {
         width: 80%;
     }

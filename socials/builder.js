@@ -174,7 +174,7 @@
             buildPage(content)
         }
     } catch {
-        console.log(rawResponse.text())
+        console.log('Access Denied.')
     }
     
     

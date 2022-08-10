@@ -16,16 +16,16 @@ function hash(str) {
     
 };
 
-fetch(`https://danileliasov-https.herokuapp.com/key=${hash(queryString)}`)
-    .then((response) => response.json())
-    .then((data) => {
+if (hash(queryString) == "1598217186") {
 
-        windowloaded = false
-        window.onload = function() {
-            windowloaded = true
-        }
+    fetch(`https://danileliasov-https.herokuapp.com/key=${hash(queryString)}`)
+        .then((response) => response.json())
+        .then((data) => {
 
-        if (hash(queryString) == "1598217186") {
+            windowloaded = false
+            window.onload = function() {
+                windowloaded = true
+            }
 
             function waitForElement(){
                 endTime = new Date();
@@ -76,8 +76,7 @@ fetch(`https://danileliasov-https.herokuapp.com/key=${hash(queryString)}`)
 
             waitForElement()
 
-        } else {
-            window.location.replace("https://danileliasov.com/socials/denied");
-        }
-    });
-
+        });
+} else {
+    window.location.replace("https://danileliasov.com/socials/denied");
+}

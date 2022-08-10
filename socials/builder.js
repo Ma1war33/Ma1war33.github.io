@@ -37,7 +37,7 @@ if (queryStringHash == "124b507af6dcce7e207793ae021068c20958fcfddea9e570eb22081b
 
                             var div = document.createElement("div");
                             div.classList.add("social-item");
-                            div.style.animation = `0.5s ${(0.1* i)+0.3}s 1 pop-in forwards ease-out`
+                            div.style.animation = `0.5s ${(0.1* i)+0.25}s 1 pop-in forwards ease-out`
 
                             var div_text = document.createElement("p");
                             div_text.innerHTML = data[i].title;

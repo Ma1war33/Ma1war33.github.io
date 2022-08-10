@@ -14,7 +14,7 @@ fetch(`https://danileliasov-https.herokuapp.com/key=${queryStringHash}`)
         
         if (response.status == 200) {
             KeyValid = true
-            response.json()
+            response = response.json()
 
             console.log("Access Granted")
             console.log(response)

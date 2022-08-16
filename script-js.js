@@ -1,8 +1,9 @@
 navbar = document.getElementById("navbar");
 wordle_img = document.getElementById("wordle-img");
 const divs = document.getElementsByClassName("fade");
+console.log(divs)
 const intersectLines_orig = [[-999, -999, 10, 30], [50, 70, 200, 250], [90, 100, 200, 250], [-999, -999, 30, 50], [60, 90, 220, 250], [230, 280, 500, 550]]
-const movementLines_orig = [[100, 250, -10], [100, 200]]
+const movementLines_orig = [[100, 250, -10], [100, 180]]
 
 ItemList = divs
 ItemList2 = [ItemList[4], ItemList[4]]
@@ -35,23 +36,12 @@ function refreshIntersectLines() {
 
 }
 
-window.onscroll = function(e) {
-    // print "false" if direction is down and "true" if up
-    if (this.oldScroll > this.scrollY) {
-        navbar.classList.add('show')
-    } else {
-        navbar.classList.remove('show')
-    }
-    this.oldScroll = this.scrollY;
-
-}
-
 
 //window.addEventListener("resize", refreshIntersectLines)
 refreshIntersectLines()
 
 window.addEventListener("scroll", e => {
-
+    
     for (let i = 0; i < ItemList2.length; i++) {
 
         if (window.innerWidth >= 900) {

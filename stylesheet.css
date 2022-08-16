@@ -16,6 +16,7 @@ h1::selection {
 
 .fade {
     opacity: 0;
+    transition: opacity 0.2s;
 }
 .sticky-helper2 {
     position: absolute;

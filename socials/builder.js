@@ -115,6 +115,7 @@
             var div_text = document.createElement("p");
             div_text.innerHTML = data[i].title;
             div_text.classList.add("social-item-text");
+            div_text.classList.add("text");
 
             var div_image = document.createElement("img");
             div_image.src = data[i].image;
@@ -156,7 +157,7 @@
     
     } catch {
         console.log('Access Denied.')
-        window.location.replace("https://danileliasov.com/access-denied");
+        //window.location.replace("https://danileliasov.com/access-denied");
     }
     
     

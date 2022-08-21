@@ -16,7 +16,10 @@ body {
     margin: 0;
     background-color: #212121;
 }
-
+.text {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 700;
+}
 .auth-div {
     position: absolute;
     top:50%;
@@ -27,17 +30,13 @@ body {
 }
 
 .auth {
-    
     font-size: 6vw;
-	font-family: motiva-sans, sans-serif;
     font-weight: 500;
 	color: lightgrey;
     line-height: 1;
 
 }
 .auth-undertext {
-    font-family: motiva-sans, sans-serif;
-    font-weight: 700;
     font-size: 2em;
     text-align: center;
     color:grey;
@@ -52,18 +51,11 @@ body {
     transition: opacity 0.4s;
 }
 .title {
-    font-family: motiva-sans, sans-serif;
-    font-weight: 700;
     font-size: 10em;
     text-align: center;
     color:white;
-
-    /*text-decoration:underline;*/
-
 }
 .undertext {
-    font-family: motiva-sans, sans-serif;
-    font-weight: 700;
     font-size: 2.5em;
     text-align: center;
     color:white;
@@ -106,10 +98,7 @@ body {
     transform: translateY(-2.4vh);
 }
 .social-item-text {
-    font-family: motiva-sans, sans-serif;
-    font-weight: 700;
     font-size: 4.5em;
-    /*color: #C9D6DF;*/
     color:white;
     display:inline-block;
 }

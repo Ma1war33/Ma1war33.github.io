@@ -1,11 +1,10 @@
 body {
     margin:0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    /*rgb(33, 33, 33)*/
     height: 500vh;
-
     
 }
-
 p::selection {
     background: rgba(72,72,72,.5);
     color: inherit;
@@ -83,14 +82,13 @@ h1::selection {
 
 .left {
     top: 0;
-    z-index: 3;
+    z-index: 1;
 
     height: 100vh;
     width: 45%;
     float: left;
     position: sticky;
 
-    background-color: white;
     display:table;
     overflow: hidden;
 }
@@ -102,7 +100,6 @@ h1::selection {
     float: right;
 
     /*background-color: #252930;*/
-    background-color: white;
 
     position: relative;
 
@@ -126,7 +123,6 @@ h1::selection {
 
 }
 .img-div-2 {
-    background-color: white;
     background-position: center center;
     background-repeat: no-repeat, no-repeat;
     background-size: auto 50%;
@@ -146,19 +142,6 @@ h1::selection {
     transform: translateX(0);
 
     box-shadow: 5px 3px 7px 3px rgba(0,0,0,0.21);
-}
-.img-div-3 {
-    /*background-image: url("");
-    background-position: top center;
-    background-repeat: no-repeat, no-repeat;*/
-    background-size: auto 100%;
-}
-.img-div-4 {
-    /*background-image: url("");
-    background-position: top center;
-    background-repeat: no-repeat, no-repeat;*/
-    background-size: auto 100%;
-
 }
 
 
@@ -261,7 +244,6 @@ body::after{
     width: 100%;
     float: left;
 
-    background-color: white;
     display:table;
     overflow:hidden;
 }
@@ -281,9 +263,20 @@ body::after{
 .p3 {
     padding: 0 0.4em 0 0;
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.2;
+    color: white;
 
     font-size: calc(4em + 2vw);
+
+    transition: 1s;
+}
+.p3-t {
+    position: absolute;
+    font-size: calc(0.9em + 0.3vw); 
+    color: grey;
+
+    left:50%;
+    transform: translate(-50%, -190%);
 }
 .projects-div {
 
@@ -292,24 +285,67 @@ body::after{
     transform: translateX(-50%);
     align-content: center;
 
-    /*background-image: url("Images/present.webp");
+    /*height: 80vh;
+    background-image: url("Images/present.webp");
     background-position: top center;
     background-repeat: no-repeat, no-repeat;
     background-size: auto 100%;*/
 
 }
 .projects-item {
-    left:50%;
-    transform: translateX(-50%);
-    background-color: #323232;
-    border-radius: 70px;
-    width: 95vw;
-    height:40vh;
-    margin-top: 2vh;
+    margin-top: -5px;
+    width: 27.5vw;
+    height: 27.5vw;
+    display: inline-block;
     
-    position: relative;
-}
+    background-position: top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 101%;
 
+}
+.projects-modal {
+    position: absolute;
+    width:calc(82.5vw + 1px);
+    height:calc(55vw + 1px);
+    margin-top:-5px;
+    margin-left:-1px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    background-position: top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 100%;
+    display: none;
+
+}
+.projects-modal-close {
+    position: absolute;
+    height: 3vw;
+    width: 3vw;
+}
+.material-symbols-close {
+    margin-left:60%;
+    margin-top:40%;
+
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 .bottom {
     background-image: url("");
     background-position: top center;
@@ -321,7 +357,9 @@ body::after{
     margin-top:100vh;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+
     .left {
         float:none;
         width: 100%;
@@ -358,3 +396,9 @@ body::after{
     }
 
   }
+
+
+
+
+
+

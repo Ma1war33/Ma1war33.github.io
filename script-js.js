@@ -1,12 +1,15 @@
 navbar = document.getElementById("navbar");
 wordle_img = document.getElementById("wordle-img");
+pmodal = document.getElementById('projects-modal');
+projects_p3 = document.getElementById('projects_p3');
 const divs = document.getElementsByClassName("fade");
+
 console.log(divs)
-const intersectLines_orig = [[-999, -999, 10, 30], [50, 70, 200, 250], [90, 100, 200, 250], [-999, -999, 30, 50], [60, 90, 220, 250], [230, 280, 500, 550]]
-const movementLines_orig = [[100, 250, -10], [100, 180]]
+const intersectLines_orig = [[-999, -999, 10, 30], [50, 70, 200, 250], [90, 100, 200, 250], [-999, -999, 30, 50], [60, 90, 220, 250], [260, 290, 500, 550]]
+const movementLines_orig = [[100, 250, -10], [100, 180], [230, 280], [255, 400]]
 
 ItemList = divs
-ItemList2 = [ItemList[4], ItemList[4]]
+ItemList2 = [ItemList[4], ItemList[4], document.body, pmodal]
 
 
 intersectLines = intersectLines_orig
@@ -44,8 +47,8 @@ window.addEventListener("scroll", e => {
     
     for (let i = 0; i < ItemList2.length; i++) {
 
-        if (window.innerWidth >= 900) {
-            if (movementLines[i].length == 3) {
+        if (window.innerWidth >= 1000) {
+            if (i == 0) {
 
                 if (scrollY < movementLines[i][0] || scrollY > movementLines[i][1]) {
                     ItemList2[i].style.transform = "translateX(0);"
@@ -67,7 +70,7 @@ window.addEventListener("scroll", e => {
         }
 
         
-        if (movementLines[i].length == 2) {
+        if (i == 1) {
 
             if (scrollY < movementLines[i][0]) {
                 wordle_img.src="Images/wordle/1.webp"
@@ -82,14 +85,41 @@ window.addEventListener("scroll", e => {
     
                         x = Math.floor((scrollY - movementLines[i][0]) / (AreaLength / 7) + 1)
                         wordle_img.src=`Images/wordle/${x}.webp`
-                        console.log(`Images/wordle/${x}.webp`)
     
 
-                    }
-                
-                
+                    } 
             } 
 
+        }
+
+        if (i == 2) {
+            if (scrollY < movementLines[i][0]) {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+            } else {
+                if (scrollY > movementLines[i][1]) {
+                    document.body.style.backgroundColor = 'rgb(20, 20, 20)';
+                } else if (scrollY >= movementLines[i][0]) {
+                    AreaScrolled = (scrollY - movementLines[i][0])/(movementLines[i][1] - movementLines[i][0])
+                    x = 255 - (235 * AreaScrolled)
+                    document.body.style.backgroundColor =`rgb(${x}, ${x}, ${x})`
+
+
+                } 
+            }
+        }
+
+        if (window.getComputedStyle(pmodal).display == 'block') {
+            if (i == 3) {
+                if (scrollY < movementLines[i][0] || scrollY > movementLines[i][1]) {
+                    pmodal.style.animation = `fade-out 0.25s forwards`
+                    projects_p3.style.filter = 'blur(0px)'
+                    function removemodal() {
+                        pm.style.display = 'none'
+                        pm.style.backgroundImage = ''
+                    }
+                    setTimeout(removemodal, 250)
+                } 
+            }
         }
     }
 
@@ -123,3 +153,5 @@ window.addEventListener("scroll", e => {
     
     
 })
+
+

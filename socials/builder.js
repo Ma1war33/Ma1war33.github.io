@@ -157,7 +157,7 @@
     
     } catch {
         console.log('Access Denied.')
-        window.location.replace("https://danileliasov.com/access-denied");
+        //window.location.replace("https://danileliasov.com/access-denied");
     }
     
     

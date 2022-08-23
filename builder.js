@@ -47,7 +47,7 @@ for (let i = 0; i < projects.length; i++) {
     
     
     if (i % 3 == 0) {
-        div.style.marginLeft = '8.75vw';
+        div.style.marginLeft = '11.5vw';
     }
 
     if (projects[i].image != '') {

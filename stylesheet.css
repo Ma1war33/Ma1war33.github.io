@@ -267,8 +267,6 @@ body::after{
     color: white;
 
     font-size: calc(4em + 2vw);
-
-    transition: 1s;
 }
 .p3-t {
     position: absolute;
@@ -294,21 +292,25 @@ body::after{
 }
 .projects-item {
     margin-top: -5px;
-    width: 27.5vw;
-    height: 27.5vw;
+    width: 25vw;
+    height: 25vw;
     display: inline-block;
     
     background-position: top center;
     background-repeat: no-repeat, no-repeat;
     background-size: auto 101%;
 
+    margin-left: 1vw;
+    margin-top: 1vw;
+    border-radius: 10%;
+
+
 }
 .projects-modal {
     position: absolute;
-    width:calc(82.5vw + 1px);
-    height:calc(55vw + 1px);
-    margin-top:-5px;
-    margin-left:-1px;
+    width:calc(77vw);
+    height:calc(52vw);
+    margin-top: 1px;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
@@ -319,11 +321,13 @@ body::after{
     background-size: auto 100%;
     display: none;
 
+    border-radius: 2.5vw;
+
 }
 .projects-modal-close {
     position: absolute;
-    height: 3vw;
-    width: 3vw;
+    height: 8vw;
+    width: 8vw;
 }
 .material-symbols-close {
     margin-left:60%;

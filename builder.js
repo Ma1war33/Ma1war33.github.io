@@ -74,10 +74,10 @@ for (let i = 0; i < projects.length; i++) {
             container.style.animation = `fade-out 0s forwards`
             container.style.animationDelay = `${pm_fadetime}s`;
 
-            //pm_info.style.backgroundColor = `${color}`
-            //pm_info.style.display = 'block';
-            //pm_info.style.animation = `fade-in-slide 0.3s forwards`;
-            //pm_info.style.animationDelay = `${pm_fadetime-0.1}s`;
+            pm_info.style.backgroundColor = `${color}`
+            pm_info.style.display = 'block';
+            pm_info.style.animation = `fade-in-slide 0.3s forwards`;
+            pm_info.style.animationDelay = `${pm_fadetime-0.1}s`;
             
         };    
     }

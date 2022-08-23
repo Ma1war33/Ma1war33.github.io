@@ -52,10 +52,9 @@ for (let i = 0; i < projects.length; i++) {
 
     if (projects[i].image != '') {
         div.onclick = function(x) {
-            console.log('OPENING')
-            image = x.toElement.getAttribute('modalimage')
+            image = x.target.getAttribute('modalimage')
+
             pm.style.backgroundImage = `url(${image})`
-    
             pm.style.display = 'block'
             pm.style.animation = `fade-in ${pm_fadetime}s forwards`
         };    

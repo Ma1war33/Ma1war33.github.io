@@ -1,6 +1,8 @@
 navbar = document.getElementById("navbar");
 wordle_img = document.getElementById("wordle-img");
 pmodal = document.getElementById('projects-modal');
+pmodal_info = document.getElementById('projects-info-modal');
+pcontainer = document.getElementById('container');
 projects_p3 = document.getElementById('projects_p3');
 const divs = document.getElementsByClassName("fade");
 
@@ -19,13 +21,11 @@ function refreshIntersectLines() {
     windowHeight = window.innerHeight
     windowWidth = window.innerWidth
 
-
     for (let i = 0; i < intersectLines_orig.length; i++) {
         for (let j = 0; j < intersectLines_orig[i].length; j++) {
             intersectLines[i][j] = ((intersectLines_orig[i][j])*(windowHeight/100))
         }
     }
-
     for (let i = 0; i < movementLines_orig.length; i++) {
         for (let j = 0; j < movementLines_orig[i].length; j++) {
             if (j == 2){
@@ -36,7 +36,6 @@ function refreshIntersectLines() {
             }
         }
     }
-
 }
 
 
@@ -112,8 +111,10 @@ window.addEventListener("scroll", e => {
             if (i == 3) {
                 if (scrollY < movementLines[i][0] || scrollY > movementLines[i][1]) {
                     pmodal.style.animation = `fade-out 0.25s forwards`
-                    projects_p3.style.filter = 'blur(0px)'
+                    pmodal_info.style.animation = `fade-out 0.25s forwards`
+                    pcontainer.style.animation = `fade-in 0.25s forwards`
                     function removemodal() {
+                        pmodal_info.style.display = 'none'
                         pm.style.display = 'none'
                         pm.style.backgroundImage = ''
                     }

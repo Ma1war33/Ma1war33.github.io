@@ -6,7 +6,6 @@ pcontainer = document.getElementById('container');
 projects_p3 = document.getElementById('projects_p3');
 const divs = document.getElementsByClassName("fade");
 
-console.log(divs)
 const intersectLines_orig = [[-999, -999, 10, 30], [50, 70, 200, 250], [90, 100, 200, 250], [-999, -999, 30, 50], [60, 90, 220, 250], [260, 290, 500, 550]]
 const movementLines_orig = [[100, 250, -10], [100, 180], [230, 280], [255, 400]]
 
@@ -85,10 +84,8 @@ window.addEventListener("scroll", e => {
                         x = Math.floor((scrollY - movementLines[i][0]) / (AreaLength / 7) + 1)
                         wordle_img.src=`Images/wordle/${x}.webp`
     
-
                     } 
             } 
-
         }
 
         if (i == 2) {
@@ -107,19 +104,19 @@ window.addEventListener("scroll", e => {
             }
         }
 
-        if (window.getComputedStyle(pmodal).display == 'block') {
-            if (i == 3) {
-                if (scrollY < movementLines[i][0] || scrollY > movementLines[i][1]) {
-                    pmodal.style.animation = `fade-out 0.25s forwards`
-                    pmodal_info.style.animation = `fade-out 0.25s forwards`
-                    pcontainer.style.animation = `fade-in 0.25s forwards`
-                    function removemodal() {
-                        pmodal_info.style.display = 'none'
-                        pm.style.display = 'none'
-                        pm.style.backgroundImage = ''
-                    }
-                    setTimeout(removemodal, 250)
-                } 
+        if (i == 3) {
+            if (window.getComputedStyle(pmodal).display == 'block') {
+                    if (scrollY < movementLines[i][0] || scrollY > movementLines[i][1]) {
+                        pmodal.style.animation = `fade-out 0.25s forwards`
+                        pmodal_info.style.animation = `fade-out 0.25s forwards`
+                        pcontainer.style.animation = `fade-in 0.25s forwards`
+                        function removemodal() {
+                            pmodal_info.style.display = 'none'
+                            pm.style.display = 'none'
+                            pm.style.backgroundImage = ''
+                        }
+                        setTimeout(removemodal, 250)
+                    } 
             }
         }
     }

@@ -337,7 +337,7 @@ body::after{
 }
 .projects-info-modal {
     width:calc(77vw);
-    height:calc(12vw);
+    height:auto;
     margin-left:50%;
     transform: translateX(-50%);
     margin-top: 2vw;
@@ -345,8 +345,32 @@ body::after{
 
     display: none;
     border-radius: 2.5vw;
+
+    text-align: center;
+
+    background-position: top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 200% auto;
     
 }
+.projects-info-modal-div {
+    position: relative;
+    margin-left: 5%;
+    width: 90%;
+}
+.projects-info-modal-title {
+    padding-top: 3vh;
+    font-size: calc(1.5em + 0.7vw);
+    line-height: 0.5;
+}
+.projects-info-modal-text {
+    padding-bottom: 3vh;
+    color:rgb(82, 82, 82);
+    line-height: 1;
+    font-size: calc(1em + 0.5vw);
+
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;

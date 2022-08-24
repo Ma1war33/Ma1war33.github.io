@@ -412,7 +412,7 @@ body::after{
 
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content:url("Images/projects/pi.webp") url("Images/projects/socials.webp") url("Images/projects/thispage.webp") url("Images/projects/wordle.webp");
+    content:url("Images/projects/pi.webp") url("Images/projects/socials.webp") url("Images/projects/thispage.webp") url("Images/projects/wordle.webp") url("Images/projects/morse.webp");
 }
 
 @media (max-width: 1000px) {

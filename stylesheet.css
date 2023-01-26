@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Gunsan;
+    src: url("Gunsan.otf");
+}
+
+@font-face {
+    font-family: Xtrada;
+    src: url("xtrada.ttf");
+}
+
+@font-face {
+    font-family: Blackrocky;
+    src: url("blackrocky.ttf");
+}
+
+body {
+    background-color: #16161a;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.main-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    background-color: #7f5af0;
+
+    padding: 50px;
+    padding-bottom: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 5px #4b358c;
+
+    display: inline-block;
+
+    animation: fade-in 1s forwards cubic-bezier(.32, .94, .6, 1);
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+h1 {
+    font-family: "Gunsan", sans-serif;
+    font-weight: 500;
+    font-size: 7em;
+    font-style: normal;
+
+    line-height: 20%;
+    text-align: center;
+
+
+    color: #fffffe;
+    opacity: 0;
+
+    /*transition: transform 1.4s cubic-bezier(.32, .94, .6, 1);*/
+}
+
+h2 {
+    font-family: "museo-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2em;
+
+    color: #16161a;
+    opacity: 0;
+
+    text-align: center;
+
+    animation: fade-in 1s 1s forwards cubic-bezier(.32, .94, .6, 1)
+}
+
+.overflow-container {
+    overflow: hidden;
+}
+
+.down {
+    display: inline-block;
+    animation: fade-in 1s 0.7s forwards cubic-bezier(.32, .94, .6, 1)
+}
+
+.for {
+    padding-left: 0.2em;
+    display: inline-block;
+    animation: fade-in 1s 0.73s forwards cubic-bezier(.32, .94, .6, 1)
+}
+
+.maintenance {
+    margin-top: 0.2em;
+    animation: fade-in 1s 0.76s forwards cubic-bezier(.32, .94, .6, 1)
+}
+
+
+@keyframes fade-in {
+    0% {
+        transform: translateY(400%);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

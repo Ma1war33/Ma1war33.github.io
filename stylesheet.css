@@ -316,6 +316,14 @@ a {
     transform: scale(1.2);
 
     animation: background-grow 2s 0.6s forwards;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-background img {
+    width: 100%;
 }
 
 .splash-background-two {
@@ -335,6 +343,15 @@ a {
     animation: background-grow 2s 0.6s forwards;
 
     opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-background-two img {
+    width: 100%;
+    min-height: 100%;
 }
 
 .pages {

@@ -9,7 +9,7 @@ sep1 = document.getElementsByClassName('sep1')[0]
 sep2 = document.getElementsByClassName('sep2')[0]
 
 setTimeout(() => {
-    document.addEventListener('load', () => {
+    gallery_div_f.children[0].addEventListener('load', () => {
         sep1.style.animation = 'seperator_fade_1 2s 0.5s forwards'
         sep2.style.animation = 'seperator_fade_2 2s 0.5s forwards'
     })
@@ -33,7 +33,10 @@ setInterval(() => {
     if (alt == false) {
         alt = true
 
-        gallery_div_b.style.backgroundImage = 'url("Images/' + bg_images[current_bg_image] + '")'
+        //gallery_div_b.style.backgroundImage = 'url("Images/' + bg_images[current_bg_image] + '")'
+
+        gallery_div_b.children[0].src = 'Images/' + bg_images[current_bg_image]
+
         gallery_div_b.style.opacity = 1
         gallery_div_b.style.transition = `opacity ${fade_transition}s, transform ${transform_transition}s linear`
 
@@ -51,7 +54,10 @@ setInterval(() => {
     } else {
         alt = false
 
-        gallery_div_f.style.backgroundImage = 'url("Images/' + bg_images[current_bg_image] + '")'
+        //gallery_div_f.style.backgroundImage = 'url("Images/' + bg_images[current_bg_image] + '")'
+
+        gallery_div_f.children[0].src = 'Images/' + bg_images[current_bg_image]
+
         gallery_div_f.style.opacity = 1
         gallery_div_f.style.transition = `opacity ${fade_transition}s, transform ${transform_transition}s linear`
 

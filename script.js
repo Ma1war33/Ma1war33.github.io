@@ -5,6 +5,17 @@ const bg_images = ['skyline.webp', 'flats.webp', 'skyline2.webp', 'maldives.webp
 var current_bg_image = 0
 var alt = false
 
+sep1 = document.getElementsByClassName('sep1')[0]
+sep2 = document.getElementsByClassName('sep2')[0]
+
+setTimeout(() => {
+    document.addEventListener('load', () => {
+        sep1.style.animation = 'seperator_fade_1 2s 0.5s forwards'
+        sep2.style.animation = 'seperator_fade_2 2s 0.5s forwards'
+    })
+}, 250)
+
+
 
 
 fade_transition = 2 // sec

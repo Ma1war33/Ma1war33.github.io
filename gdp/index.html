@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="title">
+        <h1>∆ GDP Correlation</h1>
+        <p class="bottomtext">The correlation matrix below shows the correlation between the growth in GDP
+            of different countries.
+        </p>
+    </div>
+    <div class="container">
+        <div class="graph">
+            <div class="rownum-row">
+                <div class="sep"></div>
+                <div class="rownum">
+                    <p>1.</p>
+                </div>
+                <div class="rownum">
+                    <p>2.</p>
+                </div>
+                <div class="rownum">
+                    <p>3.</p>
+                </div>
+                <div class="rownum">
+                    <p>4.</p>
+                </div>
+                <div class="rownum">
+                    <p>5.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colnum">
+                    <p>1.</p>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <div class="row">
+                <div class="colnum">
+                    <p>2.</p>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <div class="row">
+                <div class="colnum">
+                    <p>3.</p>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <div class="row">
+                <div class="colnum">
+                    <p>4.</p>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <div class="row">
+                <div class="colnum">
+                    <p>5.</p>
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+        <div class="key">
+            <p class="top">1</p>
+            <p class="bottom"></p>
+        </div>
+        <div class="menu">
+            <div>
+                <p>Start - End</p>
+                <select class="dateselect startdate"></select>
+                <select class="dateselect enddate"></select>
+            </div>
+            <div>
+                <p>*Must be at least two years apart</p>
+            </div>
+            <div>
+                <p>1.</p><select class="countryselect"></select>
+            </div>
+            <div>
+                <p>2.</p><select class="countryselect"></select>
+            </div>
+            <div>
+                <p>3.</p><select class="countryselect"></select>
+            </div>
+            <div>
+                <p>4.</p><select class="countryselect"></select>
+            </div>
+            <div>
+                <p>5.</p><select class="countryselect"></select>
+            </div>
+            <div>
+                <button onclick="randomise()">Randomise</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    options = [
+        'Aruba',
+        'Africa Eastern and Southern',
+        'Afghanistan',
+        'Africa Western and Central',
+        'Angola',
+        'Albania',
+        'Arab World',
+        'United Arab Emirates',
+        'Argentina',
+        'Armenia',
+        'Antigua and Barbuda',
+        'Australia',
+        'Austria',
+        'Azerbaijan',
+        'Burundi',
+        'Belgium',
+        'Benin',
+        'Burkina Faso',
+        'Bangladesh',
+        'Bulgaria',
+        'Bahrain',
+        'Bosnia and Herzegovina',
+        'Belarus',
+        'Belize',
+        'Bermuda',
+        'Bolivia',
+        'Brazil',
+        'Barbados',
+        'Brunei Darussalam',
+        'Bhutan',
+        'Botswana',
+        'Central African Republic',
+        'Canada',
+        'Central Europe and the Baltics',
+        'Switzerland',
+        'Chile',
+        'China',
+        "Cote d'Ivoire",
+        'Cameroon',
+        'Congo, Dem. Rep.',
+        'Congo, Rep.',
+        'Colombia',
+        'Comoros',
+        'Cabo Verde',
+        'Costa Rica',
+        'Caribbean small states',
+        'Curacao',
+        'Cayman Islands',
+        'Cyprus',
+        'Czechia',
+        'Germany',
+        'Djibouti',
+        'Dominica',
+        'Denmark',
+        'Dominican Republic',
+        'Algeria',
+        'East Asia & Pacific',
+        'Europe & Central Asia',
+        'Ecuador',
+        'Egypt, Arab Rep.',
+        'Euro area',
+        'Eritrea',
+        'Spain',
+        'Estonia',
+        'Ethiopia',
+        'European Union',
+        'Finland',
+        'Fiji',
+        'France',
+        'Micronesia, Fed. Sts.',
+        'Gabon',
+        'United Kingdom',
+        'Georgia',
+        'Ghana',
+        'Guinea',
+        'Gambia, The',
+        'Guinea-Bissau',
+        'Equatorial Guinea',
+        'Greece',
+        'Grenada',
+        'Guatemala',
+        'Guyana',
+        'High income',
+        'Hong Kong SAR, China',
+        'Honduras',
+        'Croatia',
+        'Haiti',
+        'Hungary',
+        'Indonesia',
+        'India',
+        'Ireland',
+        'Iran, Islamic Rep.',
+        'Iraq',
+        'Iceland',
+        'Israel',
+        'Italy',
+        'Jamaica',
+        'Jordan',
+        'Japan',
+        'Kazakhstan',
+        'Kenya',
+        'Kyrgyz Republic',
+        'Cambodia',
+        'Kiribati',
+        'St. Kitts and Nevis',
+        'Korea, Rep.',
+        'Kuwait',
+        'Lao PDR',
+        'Lebanon',
+        'Liberia',
+        'Libya',
+        'St. Lucia',
+        'Latin America & Caribbean',
+        'Low income',
+        'Sri Lanka',
+        'Lesotho',
+        'Lithuania',
+        'Luxembourg',
+        'Latvia',
+        'Macao SAR, China',
+        'Morocco',
+        'Moldova',
+        'Madagascar',
+        'Maldives',
+        'Middle East & North Africa',
+        'Mexico',
+        'Marshall Islands',
+        'Middle income',
+        'North Macedonia',
+        'Mali',
+        'Malta',
+        'Myanmar',
+        'Montenegro',
+        'Mongolia',
+        'Mozambique',
+        'Mauritania',
+        'Mauritius',
+        'Malawi',
+        'Malaysia',
+        'North America',
+        'Namibia',
+        'Niger',
+        'Nigeria',
+        'Nicaragua',
+        'Netherlands',
+        'Norway',
+        'Nepal',
+        'Nauru',
+        'New Zealand',
+        'Oman',
+        'Pakistan',
+        'Panama',
+        'Peru',
+        'Philippines',
+        'Palau',
+        'Papua New Guinea',
+        'Poland',
+        'Puerto Rico',
+        'Portugal',
+        'Paraguay',
+        'West Bank and Gaza',
+        'Pacific island small states',
+        'Qatar',
+        'Romania',
+        'Russian Federation',
+        'Rwanda',
+        'South Asia',
+        'Saudi Arabia',
+        'Sudan',
+        'Senegal',
+        'Singapore',
+        'Solomon Islands',
+        'Sierra Leone',
+        'El Salvador',
+        'San Marino',
+        'Somalia',
+        'Serbia',
+        'South Sudan',
+        'Sub-Saharan Africa',
+        'Small states',
+        'Sao Tome and Principe',
+        'Suriname',
+        'Slovak Republic',
+        'Slovenia',
+        'Sweden',
+        'Eswatini',
+        'Sint Maarten (Dutch part)',
+        'Seychelles',
+        'Syrian Arab Republic',
+        'Turks and Caicos Islands',
+        'Chad',
+        'Togo',
+        'Thailand',
+        'Tajikistan',
+        'Turkmenistan',
+        'Timor-Leste',
+        'Tonga',
+        'Trinidad and Tobago',
+        'Tunisia',
+        'Turkiye',
+        'Tuvalu',
+        'Tanzania',
+        'Uganda',
+        'Ukraine',
+        'Uruguay',
+        'United States',
+        'Uzbekistan',
+        'St. Vincent and the Grenadines',
+        'Venezuela, RB',
+        'Vietnam',
+        'Vanuatu',
+        'World',
+        'Samoa',
+        'Kosovo',
+        'Yemen, Rep.',
+        'South Africa',
+        'Zambia',
+        'Zimbabwe'
+    ]
+
+    bottomtext = document.getElementsByClassName('bottomtext')[0]
+
+    selects = document.getElementsByClassName("countryselect")
+    squares = document.getElementsByClassName("square")
+
+    // Adding options and listeners to country selects
+    orig_values = []
+    for (let i = 0; i < selects.length; i++) {
+        for (let j = 0; j < options.length; j++) {
+            var opt = document.createElement('option');
+            opt.value = options[j];
+            opt.innerHTML = options[j];
+            selects[i].appendChild(opt);
+        }
+        selects[i].addEventListener("change", (e) => { getCorrMatrix() })
+    }
+
+    date_selects = document.getElementsByClassName("dateselect")
+
+    // Adding options and listeners to date selects
+    for (let i = 0; i < date_selects.length; i++) {
+        for (let year = 1990; year < 2022; year++) {
+            var opt = document.createElement('option');
+            opt.value = year;
+            opt.innerHTML = year;
+            date_selects[i].appendChild(opt);
+        }
+
+        date_selects[0].value = 1990
+        date_selects[1].value = 2021
+        date_selects[i].addEventListener("change", (e) => { getCorrMatrix() })
+    }
+
+    // Randomise countries
+    rand_values = []
+    function randomise() {
+        for (let i = 0; i < selects.length; i++) {
+            got_value = false
+            while (got_value == false) {
+                rand_value = options[Math.round(Math.random() * options.length)]
+                if (!rand_values.includes(rand_value)) {
+                    got_value = true
+                }
+            }
+            selects[i].value = rand_value
+            rand_values.push(rand_value)
+        }
+        getCorrMatrix()
+    }
+    randomise()
+
+    // Request new correlation matrix from server
+    function getCorrMatrix() {
+        dates = []
+        for (let i = 0; i < date_selects.length; i++) {
+            dates.push(date_selects[i].value)
+        }
+
+        countries = []
+        for (let i = 0; i < selects.length; i++) {
+            countries.push(selects[i].value)
+        }
+
+        countries_str = ''
+        for (let i = 0; i < countries.length; i++) {
+            if (i != countries.length - 1) {
+                countries_str += countries[i] + '|'
+            } else {
+                countries_str += countries[i]
+            }
+        }
+
+        fetch('https://danileliasov-d1888daffdc5.herokuapp.com/getmatrix', {
+            headers: {
+                countries: countries_str,
+                dates: dates
+            },
+        })
+            .then(result => result.json())
+            .then(response => {
+                bottomtext.innerHTML = "The correlation matrix below shows the correlation between the growth in GDP of different countries."
+                bottomtext.style.color = 'white'
+
+                matrix = JSON.parse(response["matrix"])
+
+                var max = 0
+                var min = 1
+                for (let i = 0; i < matrix.length; i++) {
+                    for (let j = 0; j < matrix[i].length; j++) {
+                        if (matrix[i][j] < min && matrix[i][j] != null) {
+                            min = matrix[i][j]
+                        }
+                        else if (matrix[i][j] > max && matrix[i][j] != null) {
+                            max = matrix[i][j]
+                        }
+                    }
+                }
+
+                for (let i = 0; i < matrix.length; i++) {
+                    for (let j = 0; j < matrix[i].length; j++) {
+
+                        if (matrix[i][j] == null) {
+                            matrix[i][j] = 0
+                        }
+                        //x = 0 + 1 * ((matrix[i][j] - min) * (1 / (max - min)))
+                        x = matrix[i][j]
+
+                        document.getElementsByClassName("bottom")[0].innerHTML = `0`
+                        //document.getElementsByClassName("bottom")[0].innerHTML = `${Number(min.toPrecision(2))}`
+                        document.getElementsByClassName("bottom")[0].style.marginTop = `calc(${40 * 1}vw - 1em)`
+
+                        //squares[i * 5 + j].style.backgroundColor = `rgb(${255 * Math.max(0, (1 - Math.abs(x)))}, ${255 * Math.max(0, (1 - Math.abs(x - 1 / 2)))}, ${255 * Math.max(0, (1 - Math.abs(x - 1)))})`
+                        squares[i * 5 + j].style.backgroundColor = `rgb(${255 * Math.max(0, 1 - ((2 * x)) ** (2))}, ${255 * Math.max(0, 1 - ((2 * x) - 1) ** (2))}, ${255 * Math.max(0, 1 - ((2 * x) - 2) ** (2))})`
+                        squares[i * 5 + j].innerHTML = '<p>' + Number(matrix[i][j].toPrecision(3)) + '</p>'
+                    }
+                }
+            })
+            .catch(() => {
+                console.error
+                bottomtext.innerHTML = "Could not connect to server."
+                bottomtext.style.color = 'red'
+            });
+    }
+</script>
+<style>
+    body {
+        background-color: rgb(24, 24, 24);
+
+        width: 100vw;
+
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .title {
+        margin-top: 5vh;
+        margin-left: 10vw;
+        width: 80vw;
+        height: 10vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        color: white;
+    }
+
+    .title * {
+        display: table-row;
+    }
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+
+        margin-top: 5vw;
+    }
+
+    .key {
+        width: 4vw;
+        height: 40vw;
+
+        background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 50%, rgba(0, 0, 255, 1) 100%);
+        margin-left: 4vw;
+
+        transform: translateY(1em);
+    }
+
+    .top {
+        color: white;
+        margin-left: 6vw;
+
+        transform: translateY(-1em);
+    }
+
+    .bottom {
+        color: white;
+        margin-left: 6vw;
+
+        transform: translateY(-1em);
+    }
+
+    .graph {
+        width: 40vw;
+        height: 43vw;
+    }
+
+    .row {
+        width: 40vw;
+        height: 8vw;
+
+        display: flex;
+    }
+
+    .square {
+        width: 8vw;
+        height: 8vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rownum-row {
+        width: 40vw;
+
+        display: flex;
+    }
+
+    .sep {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .rownum {
+        width: 8vw;
+        height: 3vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .colnum {
+        width: 3vw;
+        height: 8vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rownum p {
+        color: white;
+        font-weight: 800;
+    }
+
+    .colnum p {
+        color: white;
+        font-weight: 800;
+    }
+
+
+    .square p {
+        display: none;
+        color: white;
+    }
+
+    .square:hover p {
+        display: block;
+    }
+
+    .menu {
+        margin-left: 8vw;
+
+
+        background-color: rgb(70, 70, 70);
+
+        padding: 2vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        transform: translateY(1em);
+    }
+
+    .menu div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+    }
+
+    .menu div p {
+        font-size: calc(0.5em + 0.5vw);
+    }
+
+    .startdate {
+        margin: 1vw;
+    }
+
+    .dateselect {
+        width: 5vw;
+    }
+
+    .countryselect {
+        width: 15vw;
+        margin: 1vw;
+    }
+
+    button {
+        margin-top: 2vw;
+    }
+</style>
+
+</html>

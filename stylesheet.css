@@ -192,20 +192,24 @@ a {
 @keyframes notif-pop-up {
     0% {
         transform: translateY(15vh);
+        opacity: 0;
     }
 
     100% {
         transform: translateY(0vh);
+        opacity: 1;
     }
 }
 
 @keyframes notif-pop-down {
     0% {
         transform: translateY(0vh);
+        opacity: 1;
     }
 
     100% {
         transform: translateY(15vh);
+        opacity: 0;
     }
 }
 

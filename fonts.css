@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Fonts/Inter-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Gunsan';
+    src: url('Fonts/Gunsan.otf');
+}
+
+@font-face {
+    font-family: 'Gunsan Script';
+    src: url('Fonts/Gunsan\ Script.otf');
+}
+
+@font-face {
+    font-family: 'SFPRO BOLD';
+    src: url('Fonts/SFPRODISPLAYBOLD.woff')
+}
+
+@font-face {
+    font-family: 'SFPRO';
+    src: url('Fonts/SFPRODISPLAYREGULAR.woff')
+}
